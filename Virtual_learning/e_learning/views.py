@@ -21,3 +21,31 @@ def chat(request):
     return render(request, 'chat.html')
 def schedule(request):
     return render(request, 'schedule-timings.html')
+def search(request):
+    return render(request, 'search.html')
+def profile(request):
+    return render(request, 'profile.html')
+def blogdetails(request):
+    return render(request, 'blog-details.html')
+def blog(request):
+    return render(request, 'blog-list.html')
+def menteedashboard(request):
+    return render(request, 'dashboard-mentee.html')
+def booking(request):
+    return render(request, 'booking.html')
+def appointments(request):
+    return render(request, 'appointments.html')
+def favourites(request):
+    return render(request, 'favourites.html')
+def review(request):
+    return render(request, 'reviews.html')
+def profilesettings(request):
+    return render(request, 'profile-settings.html')
+def invoices(request):
+    return render(request, 'invoices.html')
+def invoiceviews(request):
+    return render(request, 'invoice-views.html')
+def mapgrid(request):
+    return render(request, 'map-grid.html')
+def maplist(request):
+    return render(request, 'map-list.html')
