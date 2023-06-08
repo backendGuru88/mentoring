@@ -1,4 +1,3 @@
-{% load static%}
 <!DOCTYPE html> 
 <html lang="en">
 	<head>
@@ -8,32 +7,20 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
 		
 		<!-- Favicon -->
-		<link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/favicon.png' %}">
+		<link href="assets/img/favicon.png" rel="icon">
 		
 		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 		
 		<!-- Fontawesome CSS -->
-		<link rel="stylesheet" href="{% static 'assets/plugins/fontawesome/css/fontawesome.min.css' %}">
-		<link rel="stylesheet" href="{% static 'assets/plugins/fontawesome/css/all.min.css' %}">
-		
-		<!-- Select2 CSS -->
-		<link rel="stylesheet" href="{% static 'assets/plugins/select2/css/select2.min.css' %}">
+		<link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
+		<link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
 		
 		<!-- Main CSS -->
-		<link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+		<link rel="stylesheet" href="assets/css/style.css">
 		
 	</head>
-	<body class="map-page">
-	
-	<!-- Loader -->
-	<div id="loader">
-		<div class="loader">
-			<span></span>
-			<span></span>
-		</div>
-	</div>
-	<!-- /Loader  -->
+	<body>
 
 		<!-- Main Wrapper -->
 		<div class="main-wrapper">
@@ -50,14 +37,14 @@
 								<span></span>
 							</span>
 						</a>
-						<a href="{% url 'home' %}" class="navbar-brand logo">
-							<img src="{% static 'assets/img/logo.png' %}" class="img-fluid" alt="Logo">
+						<a href="index.html" class="navbar-brand logo">
+							<img src="assets/img/logo.png" class="img-fluid" alt="Logo">
 						</a>
 					</div>
 					<div class="main-menu-wrapper">
 						<div class="menu-header">
-							<a href="{% url 'home' %}" class="menu-logo">
-								<img src="{% static 'assets/img/logo.png' %}" class="img-fluid" alt="Logo">
+							<a href="index.html" class="menu-logo">
+								<img src="assets/img/logo.png" class="img-fluid" alt="Logo">
 							</a>
 							<a id="menu_close" class="menu-close" href="javascript:void(0);">
 								<i class="fas fa-times"></i>
@@ -65,8 +52,16 @@
 						</div>
 						<ul class="main-nav">
 							<li class="has-submenu">
-								<a href="{% url 'home' %}">Home <i class="fas fa-chevron-down"></i></a>
-								
+								<a href="index.html">Home <i class="fas fa-chevron-down"></i></a>
+								<ul class="submenu">
+									<li><a href="index.html">Home</a></li>
+									<li><a href="index-two.html">Home 2</a></li>
+									<li><a href="index-three.html">Home 3</a></li>
+									<li><a href="index-four.html">Home 4</a></li>
+									<li><a href="index-five.html">Home 5</a></li>
+									<li><a href="index-six.html">Home 6</a></li>
+									<li><a href="index-seven.html">Home 7</a></li>
+								</ul>
 							</li>
 							<li class="has-submenu">
 								<a href="">Mentor <i class="fas fa-chevron-down"></i></a>
@@ -77,7 +72,13 @@
 									<li><a href="mentee-list.html">Mentee List</a></li>
 									<li><a href="profile-mentee.html">Mentee Profile</a></li>
 									<li class="has-submenu">
-										
+										<a href="blog.html">Blog</a>
+										<ul class="submenu">
+											<li><a href="blog.html">Blog</a></li>
+											<li><a href="blog-details.html">Blog View</a></li>
+											<li><a href="add-blog.html">Add Blog</a></li>
+											<li><a href="edit-blog.html">Edit Blog</a></li>
+										</ul>
 									</li>
 									<li><a href="chat.html">Chat</a></li>
 									<li><a href="invoices.html">Invoices</a></li>
@@ -89,10 +90,10 @@
 							<li class="has-submenu active">
 								<a href="">Mentee <i class="fas fa-chevron-down"></i></a>
 								<ul class="submenu">
-									<li class="has-submenu active">
+									<li class="has-submenu">
 										<a href="#">Mentors</a>
 										<ul class="submenu">
-											<li class="active"><a href="map-grid.html">Map Grid</a></li>
+											<li><a href="map-grid.html">Map Grid</a></li>
 											<li><a href="map-list.html">Map List</a></li>
 										</ul>
 									</li>
@@ -102,7 +103,7 @@
 									<li><a href="checkout.html">Checkout</a></li>
 									<li><a href="booking-success.html">Booking Success</a></li>
 									<li><a href="dashboard-mentee.html">Mentee Dashboard</a></li>
-									<li><a href="favourites.html">Favourites</a></li>
+									<li class="active"><a href="favourites.html">Favourites</a></li>
 									<li><a href="chat-mentee.html">Chat</a></li>
 									<li><a href="profile-settings-mentee.html">Profile Settings</a></li>
 									<li><a href="change-password.html">Change Password</a></li>
@@ -129,13 +130,18 @@
 								</ul>
 							</li>
 							<li class="has-submenu">
-								
+								<a href="">Blog <i class="fas fa-chevron-down"></i></a>
+								<ul class="submenu">
+									<li><a href="blog-list.html">Blog List</a></li>
+									<li><a href="blog-grid.html">Blog Grid</a></li>
+									<li><a href="blog-details.html">Blog Details</a></li>
+								</ul>
 							</li>
 							<li>
 								<a href="admin/index.html" target="_blank">Admin</a>
 							</li>
 							<li class="login-link">
-								<a href="{% url 'login' %}">Login / Signup</a>
+								<a href="login.html">Login / Signup</a>
 							</li>
 						</ul>		 
 					</div>		 
@@ -145,13 +151,13 @@
 						<li class="nav-item dropdown has-arrow logged-item">
 							<a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
 								<span class="user-img">
-									<img class="rounded-circle" src="{% static 'assets/img/user/user.jpg' %}" width="31" alt="Darren Elder">
+									<img class="rounded-circle" src="assets/img/user/user.jpg" width="31" alt="Darren Elder">
 								</span>
 							</a>
 							<div class="dropdown-menu dropdown-menu-end">
 								<div class="user-header">
 									<div class="avatar avatar-sm">
-										<img src="{% static 'assets/img/user/user.jpg' %}" alt="User Image" class="avatar-img rounded-circle">
+										<img src="assets/img/user/user.jpg" alt="User Image" class="avatar-img rounded-circle">
 									</div>
 									<div class="user-text">
 										<h6>Jonathan Doe</h6>
@@ -159,8 +165,8 @@
 									</div>
 								</div>
 								<a class="dropdown-item" href="dashboard.html">Dashboard</a>
-								<a class="dropdown-item" href="{% url 'profilesettings' %}">Profile Settings</a>
-								<a class="dropdown-item" href="{% url 'login' %}">Logout</a>
+								<a class="dropdown-item" href="profile-settings.html">Profile Settings</a>
+								<a class="dropdown-item" href="login.html">Logout</a>
 							</div>
 						</li>
 						<!-- /User Menu -->
@@ -171,43 +177,82 @@
 			</header>
 			<!-- /Header -->
 			
+			<!-- Breadcrumb -->
+			<div class="breadcrumb-bar">
+				<div class="container-fluid">
+					<div class="row align-items-center">
+						<div class="col-md-8 col-12">
+							<nav aria-label="breadcrumb" class="page-breadcrumb">
+								<ol class="breadcrumb">
+									<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+									<li class="breadcrumb-item active" aria-current="page">Favourites</li>
+								</ol>
+							</nav>
+							<h2 class="breadcrumb-title">Favourites</h2>
+						</div>
+						<div class="col-md-4 col-12">
+							<form class="search-form custom-search-form">
+								<div class="input-group">
+									<input type="text" placeholder="Search Favourites..." class="form-control">
+									<button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /Breadcrumb -->
+			
 			<!-- Page Content -->
 			<div class="content">
 				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-5 col-lg-4 col-xl-3 theiaStickySidebar">
 
-	            <div class="row">
-					<div class="col-xl-6 col-lg-12 order-md-last order-sm-last order-last map-left">
-				
-						<div class="row align-items-center mb-4">
-							<div class="col-md-6 col">
-								<h4>2245 Mentees found</h4>
+							<!-- Sidebar -->
+							<div class="profile-sidebar">
+								<div class="user-widget">
+									<div class="pro-avatar">JD</div>
+									<div class="rating">
+										<i class="fas fa-star filled"></i>
+										<i class="fas fa-star filled"></i>
+										<i class="fas fa-star filled"></i>
+										<i class="fas fa-star filled"></i>
+										<i class="fas fa-star"></i>
+									</div>
+									<div class="user-info-cont">
+										<h4 class="usr-name">Jonathan Doe</h4>
+										<p class="mentor-type">English Literature (M.A)</p>
+									</div>
+								</div>
+								<div class="progress-bar-custom">
+									<h6>Complete your profiles ></h6>
+									<div class="pro-progress">
+										<div class="tooltip-toggle" tabindex="0"></div>
+										<div class="tooltip">80%</div>
+									</div>
+								</div>
+								<div class="custom-sidebar-nav">
+									<ul>
+										<li><a href="dashboard-mentee.html"><i class="fas fa-home"></i>Dashboard <span><i class="fas fa-chevron-right"></i></span></a></li>
+										<li><a href="bookings-mentee.html"><i class="fas fa-clock"></i>Bookings <span><i class="fas fa-chevron-right"></i></span></a></li>
+										<li><a href="chat-mentee.html"><i class="fas fa-comments"></i>Messages <span><i class="fas fa-chevron-right"></i></span></a></li>
+										<li><a href="favourites.html" class="active"><i class="fas fa-star"></i>Favourites <span><i class="fas fa-chevron-right"></i></span></a></li>
+										<li><a href="profile-mentee.html"><i class="fas fa-user-cog"></i>Profile <span><i class="fas fa-chevron-right"></i></span></a></li>
+										<li><a href="login.html"><i class="fas fa-sign-out-alt"></i>Logout <span><i class="fas fa-chevron-right"></i></span></a></li>
+									</ul>
+								</div>
 							</div>
+							<!-- /Sidebar -->
 
-							<div class="col-md-6 col-auto">
-								<div class="view-icons ">
-									<a href="{% url 'mapgrid' %}" class="grid-view active"><i class="fas fa-th-large"></i></a>
-									<a href="{% url 'maplist' %}" class="list-view"><i class="fas fa-bars"></i></a>
-								</div>
-								<div class="sort-by d-sm-block d-none">
-									<span class="sortby-fliter">
-										<select class="select">
-											<option>Sort by</option>
-											<option class="sorting">Rating</option>
-											<option class="sorting">Popular</option>
-											<option class="sorting">Latest</option>
-											<option class="sorting">Free</option>
-										</select>
-									</span>
-								</div>
-							</div>
 						</div>
-
-							<div class="row">
-								<div class="col-sm-6 col-md-4 col-xl-6">
+						<div class="col-md-7 col-lg-8 col-xl-9">
+							<div class="row row-grid">
+								<div class="col-md-6 col-lg-4 col-xl-3">
 									<div class="profile-widget">
 										<div class="user-avatar">
-											<a href="{% url 'profile' %}">
-												<img class="img-fluid" alt="User Image" src="{% static 'assets/img/user/user.jpg' %}">
+											<a href="profile.html">
+												<img class="img-fluid" alt="User Image" src="assets/img/user/user.jpg">
 											</a>
 											<a href="javascript:void(0)" class="fav-btn">
 												<i class="far fa-bookmark"></i>
@@ -215,7 +260,7 @@
 										</div>
 										<div class="pro-content">
 											<h3 class="title">
-												<a href="{% url 'profile' %}">Ruby Perrin</a> 
+												<a href="profile.html">Ruby Perrin</a> 
 												<i class="fas fa-check-circle verified"></i>
 											</h3>
 											<p class="speciality">Digital Marketer</p>
@@ -235,25 +280,25 @@
 													<i class="far fa-clock"></i> Available on Fri, 22 Mar
 												</li>
 												<li>
-													<i class="far fa-money-bill-alt"></i> $300 - $1000 <i class="fas fa-info-circle" data-bs-toggle="tooltip" title="Lorem Ipsum"></i>
+													<i class="far fa-money-bill-alt"></i> $300 - $1000 <i class="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i>
 												</li>
 											</ul>
 											<div class="row row-sm">
 												<div class="col-6">
-													<a href="{% url 'profile' %}" class="btn view-btn">View Profile</a>
+													<a href="profile.html" class="btn view-btn">View Profile</a>
 												</div>
 												<div class="col-6">
-													<a href="{% url 'booking' %}" class="btn book-btn">Book Now</a>
+													<a href="booking.html" class="btn book-btn">Book Now</a>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
 								
-								<div class="col-sm-6 col-md-4 col-xl-6">
+								<div class="col-md-6 col-lg-4 col-xl-3">
 									<div class="profile-widget">
 										<div class="user-avatar">
-											<a href="{% url 'profile' %}">
+											<a href="profile.html">
 												<img class="img-fluid" alt="User Image" src="assets/img/user/user1.jpg">
 											</a>
 											<a href="javascript:void(0)" class="fav-btn">
@@ -262,10 +307,10 @@
 										</div>
 										<div class="pro-content">
 											<h3 class="title">
-												<a href="{% url 'profile' %}">Darren Elder</a> 
+												<a href="profile.html">Darren Elder</a> 
 												<i class="fas fa-check-circle verified"></i>
 											</h3>
-											<p class="speciality">Digital Marketer</p>
+											<p class="speciality">UNIX, Calculus, Trigonometry</p>
 											<div class="rating">
 												<i class="fas fa-star filled"></i>
 												<i class="fas fa-star filled"></i>
@@ -282,26 +327,26 @@
 													<i class="far fa-clock"></i> Available on Fri, 22 Mar
 												</li>
 												<li>
-													<i class="far fa-money-bill-alt"></i> $50 - $300 <i class="fas fa-info-circle" data-bs-toggle="tooltip" title="Lorem Ipsum"></i>
+													<i class="far fa-money-bill-alt"></i> $50 - $300 <i class="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i>
 												</li>
 											</ul>
 											<div class="row row-sm">
 												<div class="col-6">
-													<a href="{% url 'profile' %}" class="btn view-btn">View Profile</a>
+													<a href="profile.html" class="btn view-btn">View Profile</a>
 												</div>
 												<div class="col-6">
-													<a href="{% url 'booking' %}" class="btn book-btn">Book Now</a>
+													<a href="booking.html" class="btn book-btn">Book Now</a>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
 								
-								<div class="col-sm-6 col-md-4 col-xl-6">
+								<div class="col-md-6 col-lg-4 col-xl-3">
 									<div class="profile-widget">
 										<div class="user-avatar">
-											<a href="{% url 'profile' %}">
-												<img class="img-fluid" alt="User Image" src="{% static 'assets/img/user/user2.jpg' %}">
+											<a href="profile.html">
+												<img class="img-fluid" alt="User Image" src="assets/img/user/user2.jpg">
 											</a>
 											<a href="javascript:void(0)" class="fav-btn">
 												<i class="far fa-bookmark"></i>
@@ -309,10 +354,10 @@
 										</div>
 										<div class="pro-content">
 											<h3 class="title">
-												<a href="{% url 'profile' %}">Deborah Angel</a> 
+												<a href="profile.html">Deborah Angel</a> 
 												<i class="fas fa-check-circle verified"></i>
 											</h3>
-											<p class="speciality">UNIX, Calculus, Trigonometry</p>
+											<p class="speciality">Computer Programming</p>
 											<div class="rating">
 												<i class="fas fa-star filled"></i>
 												<i class="fas fa-star filled"></i>
@@ -329,26 +374,26 @@
 													<i class="far fa-clock"></i> Available on Fri, 22 Mar
 												</li>
 												<li>
-													<i class="far fa-money-bill-alt"></i> $100 - $400 <i class="fas fa-info-circle" data-bs-toggle="tooltip" title="Lorem Ipsum"></i>
+													<i class="far fa-money-bill-alt"></i> $100 - $400 <i class="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i>
 												</li>
 											</ul>
 											<div class="row row-sm">
 												<div class="col-6">
-													<a href="{% url 'profile' %}" class="btn view-btn">View Profile</a>
+													<a href="profile.html" class="btn view-btn">View Profile</a>
 												</div>
 												<div class="col-6">
-													<a href="{% url 'booking' %}" class="btn book-btn">Book Now</a>
+													<a href="booking.html" class="btn book-btn">Book Now</a>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
 								
-								<div class="col-sm-6 col-md-4 col-xl-6">
+								<div class="col-md-6 col-lg-4 col-xl-3">
 									<div class="profile-widget">
 										<div class="user-avatar">
-											<a href="{% url 'profile' %}">
-												<img class="img-fluid" alt="User Image" src="{% static 'assets/img/user/user4.jpg' %}">
+											<a href="profile.html">
+												<img class="img-fluid" alt="User Image" src="assets/img/user/user3.jpg">
 											</a>
 											<a href="javascript:void(0)" class="fav-btn">
 												<i class="far fa-bookmark"></i>
@@ -356,10 +401,10 @@
 										</div>
 										<div class="pro-content">
 											<h3 class="title">
-												<a href="{% url 'profile' %}">Sofia Brient</a> 
+												<a href="profile.html">Sofia Brient</a> 
 												<i class="fas fa-check-circle verified"></i>
 											</h3>
-											<p class="speciality">Computer Programming</p>
+											<p class="speciality">ASP.NET,Computer Gaming</p>
 											<div class="rating">
 												<i class="fas fa-star filled"></i>
 												<i class="fas fa-star filled"></i>
@@ -376,26 +421,26 @@
 													<i class="far fa-clock"></i> Available on Fri, 22 Mar
 												</li>
 												<li>
-													<i class="far fa-money-bill-alt"></i> $150 - $250 <i class="fas fa-info-circle" data-bs-toggle="tooltip" title="Lorem Ipsum"></i>
+													<i class="far fa-money-bill-alt"></i> $150 - $250 <i class="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i>
 												</li>
 											</ul>
 											<div class="row row-sm">
 												<div class="col-6">
-													<a href="{% url 'profile' %}" class="btn view-btn">View Profile</a>
+													<a href="profile.html" class="btn view-btn">View Profile</a>
 												</div>
 												<div class="col-6">
-													<a href="{% url 'booking' %}" class="btn book-btn">Book Now</a>
+													<a href="booking.html" class="btn book-btn">Book Now</a>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
 								
-								<div class="col-sm-6 col-md-4 col-xl-6">
+								<div class="col-md-6 col-lg-4 col-xl-3">
 									<div class="profile-widget">
 										<div class="user-avatar">
-											<a href="{% url 'profile' %}">
-												<img class="img-fluid" alt="User Image" src="{% static 'assets/img/user/user5.jpg' %}">
+											<a href="profile.html">
+												<img class="img-fluid" alt="User Image" src="assets/img/user/user4.jpg">
 											</a>
 											<a href="javascript:void(0)" class="fav-btn">
 												<i class="far fa-bookmark"></i>
@@ -403,10 +448,10 @@
 										</div>
 										<div class="pro-content">
 											<h3 class="title">
-												<a href="{% url 'profile' %}">Marvin Campbell</a> 
+												<a href="profile.html">Marvin Campbell</a> 
 												<i class="fas fa-check-circle verified"></i>
 											</h3>
-											<p class="speciality">ASP.NET,Computer Gaming</p>
+											<p class="speciality">Digital Marketer</p>
 											<div class="rating">
 												<i class="fas fa-star filled"></i>
 												<i class="fas fa-star filled"></i>
@@ -424,26 +469,26 @@
 												</li>
 												<li>
 													<i class="far fa-money-bill-alt"></i> $50 - $700 
-													<i class="fas fa-info-circle" data-bs-toggle="tooltip" title="Lorem Ipsum"></i>
+													<i class="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i>
 												</li>
 											</ul>
 											<div class="row row-sm">
 												<div class="col-6">
-													<a href="{% url 'profile' %}" class="btn view-btn">View Profile</a>
+													<a href="profile.html" class="btn view-btn">View Profile</a>
 												</div>
 												<div class="col-6">
-													<a href="{% url 'booking' %}" class="btn book-btn">Book Now</a>
+													<a href="booking.html" class="btn book-btn">Book Now</a>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
 								
-								<div class="col-sm-6 col-md-4 col-xl-6">
+								<div class="col-md-6 col-lg-4 col-xl-3">
 									<div class="profile-widget">
 										<div class="user-avatar">
-											<a href="{% url 'profile' %}">
-												<img class="img-fluid" alt="User Image" src="{% static 'assets/img/user/user6.jpg' %}">
+											<a href="profile.html">
+												<img class="img-fluid" alt="User Image" src="assets/img/user/user5.jpg">
 											</a>
 											<a href="javascript:void(0)" class="fav-btn">
 												<i class="far fa-bookmark"></i>
@@ -451,10 +496,10 @@
 										</div>
 										<div class="pro-content">
 											<h3 class="title">
-												<a href="{% url 'profile' %}">Katharine Berthold</a> 
+												<a href="profile.html">Katharine Berthold</a> 
 												<i class="fas fa-check-circle verified"></i>
 											</h3>
-											<p class="speciality">UNIX,Calculus,Trigonometry</p>
+											<p class="speciality">UNIX, Calculus, Trigonometry</p>
 											<div class="rating">
 												<i class="fas fa-star filled"></i>
 												<i class="fas fa-star filled"></i>
@@ -472,26 +517,26 @@
 												</li>
 												<li>
 													<i class="far fa-money-bill-alt"></i> $100 - $500 
-													<i class="fas fa-info-circle" data-bs-toggle="tooltip" title="Lorem Ipsum"></i>
+													<i class="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i>
 												</li>
 											</ul>
 											<div class="row row-sm">
 												<div class="col-6">
-													<a href="{% url 'profile' %}" class="btn view-btn">View Profile</a>
+													<a href="profile.html" class="btn view-btn">View Profile</a>
 												</div>
 												<div class="col-6">
-													<a href="{% url 'booking' %}" class="btn book-btn">Book Now</a>
+													<a href="booking.html" class="btn book-btn">Book Now</a>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
 								
-								<div class="col-sm-6 col-md-4 col-xl-6">
+								<div class="col-md-6 col-lg-4 col-xl-3">
 									<div class="profile-widget">
 										<div class="user-avatar">
-											<a href="{% url 'profile' %}">
-												<img class="img-fluid" alt="User Image" src="{% static 'assets/img/user/user7.jpg' %}">
+											<a href="profile.html">
+												<img class="img-fluid" alt="User Image" src="assets/img/user/user6.jpg">
 											</a>
 											<a href="javascript:void(0)" class="fav-btn">
 												<i class="far fa-bookmark"></i>
@@ -499,10 +544,10 @@
 										</div>
 										<div class="pro-content">
 											<h3 class="title">
-												<a href="{% url 'profile' %}">Linda Tobin</a> 
+												<a href="profile.html">Linda Tobin</a> 
 												<i class="fas fa-check-circle verified"></i>
 											</h3>
-											<p class="speciality">DM - Neurology</p>
+											<p class="speciality">General Course</p>
 											<div class="rating">
 												<i class="fas fa-star filled"></i>
 												<i class="fas fa-star filled"></i>
@@ -520,26 +565,26 @@
 												</li>
 												<li>
 													<i class="far fa-money-bill-alt"></i> $100 - $1000 
-													<i class="fas fa-info-circle" data-bs-toggle="tooltip" title="Lorem Ipsum"></i>
+													<i class="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i>
 												</li>
 											</ul>
 											<div class="row row-sm">
 												<div class="col-6">
-													<a href="{% url 'profile' %}" class="btn view-btn">View Profile</a>
+													<a href="profile.html" class="btn view-btn">View Profile</a>
 												</div>
 												<div class="col-6">
-													<a href="{% url 'booking' %}" class="btn book-btn">Book Now</a>
+													<a href="booking.html" class="btn book-btn">Book Now</a>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
 								
-								<div class="col-sm-6 col-md-4 col-xl-6">
+								<div class="col-md-6 col-lg-4 col-xl-3">
 									<div class="profile-widget">
 										<div class="user-avatar">
-											<a href="{% url 'profile' %}">
-												<img class="img-fluid" alt="User Image" src="{% static 'assets/img/user/user8.jpg' %}">
+											<a href="profile.html">
+												<img class="img-fluid" alt="User Image" src="assets/img/user/user7.jpg">
 											</a>
 											<a href="javascript:void(0)" class="fav-btn">
 												<i class="far fa-bookmark"></i>
@@ -547,10 +592,10 @@
 										</div>
 										<div class="pro-content">
 											<h3 class="title">
-												<a href="{% url 'profile' %}">Paul Richard</a> 
+												<a href="profile.html">Paul Richard</a> 
 												<i class="fas fa-check-circle verified"></i>
 											</h3>
-											<p class="speciality">Venereology & Lepros</p>
+											<p class="speciality">ASP.NET,Computer Gaming</p>
 											<div class="rating">
 												<i class="fas fa-star filled"></i>
 												<i class="fas fa-star filled"></i>
@@ -568,26 +613,26 @@
 												</li>
 												<li>
 													<i class="far fa-money-bill-alt"></i> $100 - $400 
-													<i class="fas fa-info-circle" data-bs-toggle="tooltip" title="Lorem Ipsum"></i>
+													<i class="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i>
 												</li>
 											</ul>
 											<div class="row row-sm">
 												<div class="col-6">
-													<a href="{% url 'profile' %}" class="btn view-btn">View Profile</a>
+													<a href="profile.html" class="btn view-btn">View Profile</a>
 												</div>
 												<div class="col-6">
-													<a href="{% url 'booking' %}" class="btn book-btn">Book Now</a>
+													<a href="booking.html" class="btn book-btn">Book Now</a>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
 								
-								<div class="col-sm-6 col-md-4 col-xl-6">
+								<div class="col-md-6 col-lg-4 col-xl-3">
 									<div class="profile-widget">
 										<div class="user-avatar">
-											<a href="{% url 'profile' %}">
-												<img class="img-fluid" alt="User Image" src="{% static 'assets/img/user/user15.jpg' %}">
+											<a href="profile.html">
+												<img class="img-fluid" alt="User Image" src="assets/img/user/user8.jpg">
 											</a>
 											<a href="javascript:void(0)" class="fav-btn">
 												<i class="far fa-bookmark"></i>
@@ -595,7 +640,7 @@
 										</div>
 										<div class="pro-content">
 											<h3 class="title">
-												<a href="{% url 'profile' %}">John Gibbs</a> 
+												<a href="profile.html">John Gibbs</a> 
 												<i class="fas fa-check-circle verified"></i>
 											</h3>
 											<p class="speciality">Digital Marketer</p>
@@ -616,26 +661,26 @@
 												</li>
 												<li>
 													<i class="far fa-money-bill-alt"></i> $500 - $2500 
-													<i class="fas fa-info-circle" data-bs-toggle="tooltip" title="Lorem Ipsum"></i>
+													<i class="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i>
 												</li>
 											</ul>
 											<div class="row row-sm">
 												<div class="col-6">
-													<a href="{% url 'profile' %}" class="btn view-btn">View Profile</a>
+													<a href="profile.html" class="btn view-btn">View Profile</a>
 												</div>
 												<div class="col-6">
-													<a href="{% url 'booking' %}" class="btn book-btn">Book Now</a>
+													<a href="booking.html" class="btn book-btn">Book Now</a>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
 								
-								<div class="col-sm-6 col-md-4 col-xl-6">
+								<div class="col-md-6 col-lg-4 col-xl-3">
 									<div class="profile-widget">
 										<div class="user-avatar">
-											<a href="{% url 'profile' %}">
-												<img class="img-fluid" alt="User Image" src="{% static 'assets/img/user/user9.jpg' %}">
+											<a href="profile.html">
+												<img class="img-fluid" alt="User Image" src="assets/img/user/user9.jpg">
 											</a>
 											<a href="javascript:void(0)" class="fav-btn">
 												<i class="far fa-bookmark"></i>
@@ -643,7 +688,7 @@
 										</div>
 										<div class="pro-content">
 											<h3 class="title">
-												<a href="{% url 'profile' %}">Olga Barlow</a> 
+												<a href="profile.html">Olga Barlow</a> 
 												<i class="fas fa-check-circle verified"></i>
 											</h3>
 											<p class="speciality">Digital Marketer</p>
@@ -664,26 +709,26 @@
 												</li>
 												<li>
 													<i class="far fa-money-bill-alt"></i> $75 - $250 
-													<i class="fas fa-info-circle" data-bs-toggle="tooltip" title="Lorem Ipsum"></i>
+													<i class="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i>
 												</li>
 											</ul>
 											<div class="row row-sm">
 												<div class="col-6">
-													<a href="{% url 'profile' %}" class="btn view-btn">View Profile</a>
+													<a href="profile.html" class="btn view-btn">View Profile</a>
 												</div>
 												<div class="col-6">
-													<a href="{% url 'booking' %}" class="btn book-btn">Book Now</a>
+													<a href="booking.html" class="btn book-btn">Book Now</a>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
 								
-								<div class="col-sm-6 col-md-4 col-xl-6">
+								<div class="col-md-6 col-lg-4 col-xl-3">
 									<div class="profile-widget">
 										<div class="user-avatar">
-											<a href="{% url 'profile' %}">
-												<img class="img-fluid" alt="User Image" src="{% static 'assets/img/user/user10.jpg' %}">
+											<a href="profile.html">
+												<img class="img-fluid" alt="User Image" src="assets/img/user/user10.jpg">
 											</a>
 											<a href="javascript:void(0)" class="fav-btn">
 												<i class="far fa-bookmark"></i>
@@ -691,10 +736,10 @@
 										</div>
 										<div class="pro-content">
 											<h3 class="title">
-												<a href="{% url 'profile' %}">Julia Washington</a> 
+												<a href="profile.html">Julia Washington</a> 
 												<i class="fas fa-check-circle verified"></i>
 											</h3>
-											<p class="speciality">DM - Endocrinology</p>
+											<p class="speciality">UNIX, Calculus, Trigonometry</p>
 											<div class="rating">
 												<i class="fas fa-star filled"></i>
 												<i class="fas fa-star filled"></i>
@@ -712,26 +757,26 @@
 												</li>
 												<li>
 													<i class="far fa-money-bill-alt"></i> $275 - $450 
-													<i class="fas fa-info-circle" data-bs-toggle="tooltip" title="Lorem Ipsum"></i>
+													<i class="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i>
 												</li>
 											</ul>
 											<div class="row row-sm">
 												<div class="col-6">
-													<a href="{% url 'profile' %}" class="btn view-btn">View Profile</a>
+													<a href="profile.html" class="btn view-btn">View Profile</a>
 												</div>
 												<div class="col-6">
-													<a href="{% url 'booking' %}" class="btn book-btn">Book Now</a>
+													<a href="booking.html" class="btn book-btn">Book Now</a>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
 								
-								<div class="col-sm-6 col-md-4 col-xl-6">
+								<div class="col-md-6 col-lg-4 col-xl-3">
 									<div class="profile-widget">
 										<div class="user-avatar">
-											<a href="{% url 'profile' %}">
-												<img class="img-fluid" alt="User Image" src="{% static 'assets/img/user/user11.jpg' %}">
+											<a href="profile.html">
+												<img class="img-fluid" alt="User Image" src="assets/img/user/user11.jpg">
 											</a>
 											<a href="javascript:void(0)" class="fav-btn">
 												<i class="far fa-bookmark"></i>
@@ -739,10 +784,10 @@
 										</div>
 										<div class="pro-content">
 											<h3 class="title">
-												<a href="{% url 'profile' %}">Shaun Aponte</a> 
+												<a href="profile.html">Shaun Aponte</a> 
 												<i class="fas fa-check-circle verified"></i>
 											</h3>
-											<p class="speciality">UNIX,Calculus,Trigonometry</p>
+											<p class="speciality">Diploma in (DLO)</p>
 											<div class="rating">
 												<i class="fas fa-star filled"></i>
 												<i class="fas fa-star filled"></i>
@@ -760,37 +805,47 @@
 												</li>
 												<li>
 													<i class="far fa-money-bill-alt"></i> $150 - $350 
-													<i class="fas fa-info-circle" data-bs-toggle="tooltip" title="Lorem Ipsum"></i>
+													<i class="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i>
 												</li>
 											</ul>
 											<div class="row row-sm">
 												<div class="col-6">
-													<a href="{% url 'profile' %}" class="btn view-btn">View Profile</a>
+													<a href="profile.html" class="btn view-btn">View Profile</a>
 												</div>
 												<div class="col-6">
-													<a href="{% url 'booking' %}" class="btn book-btn">Book Now</a>
+													<a href="booking.html" class="btn book-btn">Book Now</a>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-								
-								
+										
 							</div>
-							
-					<div class="load-more text-center">
-						<a class="btn btn-primary btn-sm" href="javascript:void(0);">Load More</a>	
+
+							<div class="blog-pagination mt-4">
+								<nav>
+									<ul class="pagination justify-content-center">
+										<li class="page-item disabled">
+											<a class="page-link" href="#" tabindex="-1"><i class="fas fa-angle-double-left"></i></a>
+										</li>
+										<li class="page-item">
+											<a class="page-link" href="#">1</a>
+										</li>
+										<li class="page-item active">
+											<a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+										</li>
+										<li class="page-item">
+											<a class="page-link" href="#">3</a>
+										</li>
+										<li class="page-item">
+											<a class="page-link" href="#"><i class="fas fa-angle-double-right"></i></a>
+										</li>
+									</ul>
+								</nav>
+							</div>
+
+						</div>
 					</div>
-	            </div>
-	            <!-- /content-left-->
-	            <div class="col-xl-6 col-lg-12 map-right">
-	                <div id="map" class="map-listing"></div>
-	                <!-- map-->
-	            </div>
-	            <!-- /map-right-->
-	        </div>
-	        <!-- /row-->
-	   
 				</div>
 
 			</div>		
@@ -808,7 +863,7 @@
 								<!-- Footer Widget -->
 								<div class="footer-widget footer-about">
 									<div class="footer-logo">
-										<img src="{% static 'assets/img/logo.png' %}" alt="logo">
+										<img src="assets/img/logo.png" alt="logo">
 									</div>
 									<div class="footer-about-content">
 										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
@@ -843,11 +898,11 @@
 								<div class="footer-widget footer-menu">
 									<h2 class="footer-title">For Mentee</h2>
 									<ul>
-										<li><a href="{% url 'search' %}">Search Mentors</a></li>
-										<li><a href="{% url 'login' %}">Login</a></li>
-										<li><a href="{% url 'register' %}">Register</a></li>
-										<li><a href="{% url 'booking' %}">Booking</a></li>
-										<li><a href="{% url 'menteedashboard' %}">Mentee Dashboard</a></li>
+										<li><a href="search.html">Search Mentors</a></li>
+										<li><a href="login.html">Login</a></li>
+										<li><a href="register.html">Register</a></li>
+										<li><a href="booking.html">Booking</a></li>
+										<li><a href="dashboard-mentee.html">Mentee Dashboard</a></li>
 									</ul>
 								</div>
 								<!-- /Footer Widget -->
@@ -860,11 +915,11 @@
 								<div class="footer-widget footer-menu">
 									<h2 class="footer-title">For Mentors</h2>
 									<ul>
-										<li><a href="{% url 'appointments' %}">Appointments</a></li>
-										
-										<li><a href="{% url 'login' %}">Login</a></li>
-										<li><a href="{% url 'register' %}">Register</a></li>
-										<li><a href="{% url 'dashboard' %}">Mentor Dashboard</a></li>
+										<li><a href="appointments.html">Appointments</a></li>
+										<li><a href="chat.html">Chat</a></li>
+										<li><a href="login.html">Login</a></li>
+										<li><a href="register.html">Register</a></li>
+										<li><a href="dashboard.html">Mentor Dashboard</a></li>
 									</ul>
 								</div>
 								<!-- /Footer Widget -->
@@ -909,7 +964,7 @@
 							<div class="row">
 								<div class="col-12 text-center">
 									<div class="copyright-text">
-										<p class="mb-0">&copy; 2023 Mentoring. All rights reserved.</p>
+										<p class="mb-0">&copy; 2020 Mentoring. All rights reserved.</p>
 									</div>
 								</div>
 							</div>
@@ -927,20 +982,17 @@
 		<!-- /Main Wrapper -->
 	  
 		<!-- jQuery -->
-		<script src="{% static 'assets/js/jquery-3.6.0.min.js' %}"></script>
+		<script src="assets/js/jquery-3.6.0.min.js"></script>
 		
 		<!-- Bootstrap Core JS -->
-		<script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+		<script src="assets/js/bootstrap.bundle.min.js"></script>
 		
-		<!-- Select2 JS -->
-		<script src="{% static 'assets/plugins/select2/js/select2.min.js' %}"></script>
-
-		<!-- Map JS -->
-		<script src= 'https://maps.googleapis.com/maps/api/js?key=AIzaSyD6adZVdzTvBpE2yBRK8cDfsss8QXChK0I' ></script>
-		<script src="{% static 'assets/js/map.js' %}"></script>
+		<!-- Sticky Sidebar JS -->
+        <script src="assets/plugins/theia-sticky-sidebar/ResizeSensor.js"></script>
+        <script src="assets/plugins/theia-sticky-sidebar/theia-sticky-sidebar.js"></script>
 		
 		<!-- Custom JS -->
-		<script src="{% static 'assets/js/script.js' %}"></script>
+		<script src="assets/js/script.js"></script>
 		
 	</body>
 </html>

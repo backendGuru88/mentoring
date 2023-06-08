@@ -48,13 +48,13 @@
 									<span></span>
 								</span>
 							</a>
-							<a href="index.html" class="navbar-brand navbar-brand-eight logo">
+							<a href="{% url 'home' %}" class="navbar-brand navbar-brand-eight logo">
 								<img src="{% static 'assets/img/logo-9.png' %}" class="img-fluid" alt="Logo">
 							</a>
 						</div>
 						<div class="main-menu-wrapper main-menu-wrapper-eight">
 							<div class="menu-header menu-header-eight">
-								<a href="index.html" class="menu-logo">
+								<a href="{% url 'home' %}" class="menu-logo">
 									<img src="{% static 'assets/img/logo-9.png' %}" class="img-fluid" alt="Logo">
 								</a>
 								<a id="menu_close" class="menu-close" href="javascript:void(0);">
@@ -62,100 +62,20 @@
 								</a>
 							</div>
 							<ul class="main-nav main-nav-eight">
-								<li class="active has-submenu">
-									<a href="index.html">Home <i class="fas fa-chevron-circle-down"></i></a>
-									<ul class="submenu">
-										<li><a href="index.html">Home</a></li>
-										<li><a href="index-two.html">Home 2</a></li>
-										<li><a href="index-three.html">Home 3</a></li>
-										<li><a href="index-four.html">Home 4</a></li>
-										<li><a href="index-five.html">Home 5</a></li>
-										<li><a href="index-six.html">Home 6</a></li>
-										<li class="active"><a href="index-seven.html">Home 7</a></li>
-									</ul>
-								</li>
-								<li class="has-submenu">
-									<a href="">Mentor <i class="fas fa-chevron-circle-down"></i></a>
-									<ul class="submenu">
-										<li><a href="dashboard.html">Mentor Dashboard</a></li>
-										<li><a href="bookings.html">Bookings</a></li>
-										<li><a href="schedule-timings.html">Schedule Timing</a></li>
-										<li><a href="mentee-list.html">Mentee List</a></li>
-										<li><a href="profile-mentee.html">Mentee Profile</a></li>
-										<li class="has-submenu">
-											<a href="blog.html">Blog</a>
-											<ul class="submenu">
-												<li><a href="blog.html">Blog</a></li>
-												<li><a href="blog-details.html">Blog View</a></li>
-												<li><a href="add-blog.html">Add Blog</a></li>
-												<li><a href="edit-blog.html">Edit Blog</a></li>
-											</ul>
-										</li>
-										<li><a href="chat.html">Chat</a></li>
-										<li><a href="invoices.html">Invoices</a></li>
-										<li><a href="profile-settings.html">Profile Settings</a></li>
-										<li><a href="reviews.html">Reviews</a></li>
-										<li><a href="mentor-register.html">Mentor Register</a></li>
-									</ul>
-								</li>
-								<li class="has-submenu">
-									<a href="">Mentee <i class="fas fa-chevron-circle-down"></i></a>
-									<ul class="submenu">
-										<li class="has-submenu">
-											<a href="#">Mentors</a>
-											<ul class="submenu">
-												<li><a href="map-grid.html">Map Grid</a></li>
-												<li><a href="map-list.html">Map List</a></li>
-											</ul>
-										</li>
-										<li><a href="search.html">Search Mentor</a></li>
-										<li><a href="profile.html">Mentor Profile</a></li>
-										<li><a href="bookings-mentee.html">Bookings</a></li>
-										<li><a href="checkout.html">Checkout</a></li>
-										<li><a href="booking-success.html">Booking Success</a></li>
-										<li><a href="dashboard-mentee.html">Mentee Dashboard</a></li>
-										<li><a href="favourites.html">Favourites</a></li>
-										<li><a href="chat-mentee.html">Chat</a></li>
-										<li><a href="profile-settings-mentee.html">Profile Settings</a></li>
-										<li><a href="change-password.html">Change Password</a></li>
-									</ul>
-								</li>
-								<li class="has-submenu">
-									<a href="">Pages <i class="fas fa-chevron-circle-down"></i></a>
-									<ul class="submenu">
-										<li><a href="voice-call.html">Voice Call</a></li>
-										<li><a href="video-call.html">Video Call</a></li>
-										<li><a href="search.html">Search Mentors</a></li>
-										<li><a href="components.html">Components</a></li>
-										<li class="has-submenu">
-											<a href="invoices.html">Invoices</a>
-											<ul class="submenu">
-												<li><a href="invoices.html">Invoices</a></li>
-												<li><a href="invoice-view.html">Invoice View</a></li>
-											</ul>
-										</li>
-										<li><a href="blank-page.html">Starter Page</a></li>
-										<li><a href="login.html">Login</a></li>
-										<li><a href="register.html">Register</a></li>
-										<li><a href="forgot-password.html">Forgot Password</a></li>
-									</ul>
-								</li>
-								<li class="has-submenu">
-									<a href="">Blog <i class="fas fa-chevron-circle-down"></i></a>
-									<ul class="submenu">
-										<li><a href="blog-list.html">Blog List</a></li>
-										<li><a href="blog-grid.html">Blog Grid</a></li>
-										<li><a href="blog-details.html">Blog Details</a></li>
-									</ul>
+								
+								<li>
+									<a href="{% url 'home' %}" target="_blank">Home</a>
 								</li>
 								<li>
-									<a href="admin/index.html" target="_blank">Admin</a>
+									<a href="About us/index.html" target="_blank">About us</a>
 								</li>
 								<li>
-									<a href="login.html">Login</a>
+								
+								<li>
+									<a href="{% url 'login' %}">Login</a>
 								</li>							
 								<li class="login-link">
-									<a href="login.html">Login</a>
+									<a href="{% url 'login' %}">Login</a>
 								</li>						
 								<li class="login-link">
 									<a href="register login.html">Register</a>
@@ -164,10 +84,10 @@
 						</div>		 
 						<ul class="nav header-navbar-rht header-navbar-rht-eight">
 							<li class="nav-item">
-								<a class="nav-link btn btn-register" href="register.html"><i class="fas fa-sign-in-alt"></i> Sign up</a>
+								<a class="nav-link btn btn-register" href="{% url 'register' %}"><i class="fas fa-sign-in-alt"></i> Sign up</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link btn btn-login" href="login.html"><i class="fas fa-lock"></i> Sign in</a>
+								<a class="nav-link btn btn-login" href="{% url 'login' %}"><i class="fas fa-lock"></i> Sign in</a>
 							</li>
 						</ul>
 					</nav>
@@ -186,16 +106,210 @@
                          
 						<!-- Search -->
 						<div class="search-box-eight aos" data-aos="fade-up">
-							<form action="search.html">
+							<form action="{% url 'search' %}">
 								<div class="form-search">
 									<div class="form-inner">
 										<div class="form-group search-location-eight">
 											<i class="material-icons">my_location</i>
 											<select class="form-control select">
 												<option>Location</option>
-												<option>Japan</option>
+												<option>Afghanistan</option>
+												<option>Albania</option>
+												<option>Algeria</option>
+												<option>Andorra</option>
+												<option>Angola</option>
+												<option>Antigua and Barbuda</option>
+												<option>Argentina</option>
+												<option>Armenia</option>
+												<option>Australia</option>
+												<option>Austria</option>
+												<option>Azerbaijan</option>
+												<option>Bahamas</option>
+												<option>Bahrain</option>
+												<option>Bangladesh</option>
+												<option>Barbados</option>
+												<option>Belarus</option>
+												<option>Belgium</option>
+												<option>Belize</option>
+												<option>Benin</option>
+												<option>Bhutan</option>
+												<option>Bolivia</option>
+												<option>Bosnia and Herzegovina</option>
+												<option>Botswana</option>
+												<option>Brazil</option>
+												<option>Brunei</option>
+												<option>Bulgaria</option>
+												<option>Burkina Faso</option>
+												<option>Burundi</option>
+												<option>Cabo Verde</option>
+												<option>Cambodia</option>
+												<option>Cameroon</option>
+												<option>Canada</option>
+												<option>Central African Republic</option>
+												<option>Chad</option>
+												<option>Chile</option>
+												<option>China</option>
+												<option>Colombia</option>
+												<option>Comoros</option>
+												<option>Congo, Democratic Republic of the</option>
+												<option>Congo, Republic of the</option>
+												<option>Costa Rica</option>
+												<option>Croatia</option>
+												<option>Cuba</option>
+												<option>Cyprus</option>
+												<option>Czech Republic</option>
+												<option>Denmark</option>
+												<option>Djibouti</option>
+												<option>Dominica</option>
+												<option>Dominican Republic</option>
+												<option>East Timor</option>
+												<option>Ecuador</option>
+												<option>Egypt</option>
+												<option>El Salvador</option>
+												<option>Equatorial Guinea</option>
+												<option>Eritrea</option>
+												<option>Estonia</option>
+												<option>Eswatini</option>
+												<option>Ethiopia</option>
+												<option>Fiji</option>
+												<option>Finland</option>
 												<option>France</option>
-											</select>
+												<option>Gabon</option>
+												<option>Gambia</option>
+												<option>Georgia</option>
+												<option>Germany</option>
+												<option>Ghana</option>
+												<option>Greece</option>
+												<option>Grenada</option>
+												<option>Guatemala</option>
+												<option>Guinea</option>
+												<option>Guinea-Bissau</option>
+												<option>Guyana</option>
+												<option>Haiti</option>
+												<option>Honduras</option>
+												<option>Hungary</option>
+												<option>Iceland</option>
+												<option>India</option>
+												<option>Indonesia</option>
+												<option>Iran</option>
+												<option>Iraq</option>
+												<option>Ireland</option>
+												<option>Israel</option>
+												<option>Italy</option>
+												<option>Jamaica</option>
+												<option>Japan</option>
+												<option>Jordan</option>
+												<option>Kazakhstan</option>
+												<option>Kenya</option>
+												<option>Kiribati</option>
+												<option>Korea, North</option>
+												<option>Korea, South</option>
+												<option>Kosovo</option>
+												<option>Kuwait</option>
+												<option>Kyrgyzstan</option>
+												<option>Laos</option>
+												<option>Latvia</option>
+												<option>Lebanon</option>
+												<option>Lesotho</option>
+												<option>Liberia</option>
+												<option>Libya</option>
+												<option>Liechtenstein</option>
+												<option>Lithuania</option>
+												<option>Luxembourg</option>
+												<option>Madagascar</option>
+												<option>Malawi</option>
+												<option>Malaysia</option>
+												<option>Maldives</option>
+												<option>Mali</option>
+												<option>Malta</option>
+												<option>Marshall Islands</option>
+												<option>Mauritania</option>
+												<option>Mauritius</option>
+												<option>Mexico</option>
+												<option>Micronesia</option>
+												<option>Moldova</option>
+												<option>Monaco</option>
+												<option>Mongolia</option>
+												<option>Montenegro</option>
+												<option>Morocco</option>
+												<option>Mozambique</option>
+												<option>Myanmar</option>
+												<option>Namibia</option>
+												<option>Nauru</option>
+												<option>Nepal</option>
+												<option>Netherlands</option>
+												<option>New Zealand</option>
+												<option>Nicaragua</option>
+												<option>Niger</option>
+												<option>Nigeria</option>
+												<option>North Macedonia</option>
+												<option>Norway</option>
+												<option>Oman</option>
+												<option>Pakistan</option>
+												<option>Palau</option>
+												<option>Panama</option>
+												<option>Papua New Guinea</option>
+												<option>Paraguay</option>
+												<option>Peru</option>
+												<option>Philippines</option>
+												<option>Poland</option>
+												<option>Portugal</option>
+												<option>Qatar</option>
+												<option>Romania</option>
+												<option>Russia</option>
+												<option>Rwanda</option>
+												<option>Saint Kitts and Nevis</option>
+												<option>Saint Lucia</option>
+												<option>Saint Vincent and the Grenadines</option>
+												<option>Samoa</option>
+												<option>San Marino</option>
+												<option>Sao Tome and Principe</option>
+												<option>Saudi Arabia</option>
+												<option>Senegal</option>
+												<option>Serbia</option>
+												<option>Seychelles</option>
+												<option>Sierra Leone</option>
+												<option>Singapore</option>
+												<option>Slovakia</option>
+												<option>Slovenia</option>
+												<option>Solomon Islands</option>
+												<option>Somalia</option>
+												<option>South Africa</option>
+												<option>South Sudan</option>
+												<option>Spain</option>
+												<option>Sri Lanka</option>
+												<option>Sudan</option>
+												<option>Suriname</option>
+												<option>Sweden</option>
+												<option>Switzerland</option>
+												<option>Syria</option>
+												<option>Taiwan</option>
+												<option>Tajikistan</option>
+												<option>Tanzania</option>
+												<option>Thailand</option>
+												<option>Togo</option>
+												<option>Tonga</option>
+												<option>Trinidad and Tobago</option>
+												<option>Tunisia</option>
+												<option>Turkey</option>
+												<option>Turkmenistan</option>
+												<option>Tuvalu</option>
+												<option>Uganda</option>
+												<option>Ukraine</option>
+												<option>United Arab Emirates</option>
+												<option>United Kingdom</option>
+												<option>United States</option>
+												<option>Uruguay</option>
+												<option>Uzbekistan</option>
+												<option>Vanuatu</option>
+												<option>Vatican City</option>
+												<option>Venezuela</option>
+												<option>Vietnam</option>
+												<option>Yemen</option>
+												<option>Zambia</option>
+												<option>Zimbabwe</option>
+											  </select>
+											  
 										</div>
 										<div class="form-group search-info-eight">
 											<i class="material-icons">location_city</i>
@@ -236,6 +350,7 @@
 									<div class="feature-cont">	
 										<div class="feature-text-eight">Sign up</div>
 									</div>
+									
 								</div>
 								<p>Are you looking to join online Learning? Now it's very simple, Now Sign up</p>
 								<span class="text-green">01</span>
@@ -297,13 +412,13 @@
 							<!-- Mentor Item -->
 							<div class="mendor-box">
 								<div class="mendor-img">
-									<a href="profile.html">
+									<a href="{% url 'profile' %}">
 										<img class="img-fluid" alt="" src="{% static 'assets/img/mendor/mendor-01.jpg' %}">
 									</a>
 									<div class="mendor-country"><i class="fas fa-map-marker-alt"></i> Paris, France</div>
 								</div>
 								<div class="mendor-content">
-									<h3 class="title"><a href="profile.html">Donna Yancey</a></h3>
+									<h3 class="title"><a href="{% url 'profile' %}">Donna Yancey</a></h3>
 									<div class="mendor-course">
 										Digital Marketer
 									</div>
@@ -324,13 +439,13 @@
 							<!-- Mentor Item -->
 							<div class="mendor-box">
 								<div class="mendor-img">
-									<a href="profile.html">
+									<a href="{% url 'profile' %}">
 										<img class="img-fluid" alt="" src="{% static 'assets/img/mendor/mendor-02.jpg' %}">
 									</a>
 									<div class="mendor-country"><i class="fas fa-map-marker-alt"></i> Paris, France</div>
 								</div>
 								<div class="mendor-content">
-									<h3 class="title"><a href="profile.html">James Amen</a></h3>
+									<h3 class="title"><a href="{% url 'profile' %}">James Amen</a></h3>
 									<div class="mendor-course">
 										UNIX, Calculus, Trigonometry
 									</div>
@@ -351,13 +466,13 @@
 							<!-- Mentor Item -->
 							<div class="mendor-box">
 								<div class="mendor-img">
-									<a href="profile.html">
+									<a href="{% url 'profile' %}">
 										<img class="img-fluid" alt="" src="{% static 'assets/img/mendor/mendor-03.jpg' %}">
 									</a>
 									<div class="mendor-country"><i class="fas fa-map-marker-alt"></i> Paris, France</div>
 								</div>
 								<div class="mendor-content">
-									<h3 class="title"><a href="profile.html">Marvin Downey</a></h3>
+									<h3 class="title"><a href="{% url 'profile' %}">Marvin Downey</a></h3>
 									<div class="mendor-course">
 										ASP.NET,Computer Gaming
 									</div>
@@ -378,13 +493,13 @@
 							<!-- Mentor Item -->
 							<div class="mendor-box">
 								<div class="mendor-img">
-									<a href="profile.html">
+									<a href="{% url 'profile' %}">
 										<img class="img-fluid" alt="" src="{% static 'assets/img/mendor/mendor-04.jpg' %}">
 									</a>
 									<div class="mendor-country"><i class="fas fa-map-marker-alt"></i> Paris, France</div>
 								</div>
 								<div class="mendor-content">
-									<h3 class="title"><a href="profile.html">Betty Hairston</a></h3>
+									<h3 class="title"><a href="{% url 'profile' %}">Betty Hairston</a></h3>
 									<div class="mendor-course">
 										Computer Programming
 									</div>
@@ -405,13 +520,13 @@
 							<!-- Mentor Item -->
 							<div class="mendor-box">
 								<div class="mendor-img">
-									<a href="profile.html">
+									<a href="{% url 'profile' %}">
 										<img class="img-fluid" alt="" src="{% static 'assets/img/mendor/mendor-03.jpg' %}">
 									</a>
 									<div class="mendor-country"><i class="fas fa-map-marker-alt"></i> Paris, France</div>
 								</div>
 								<div class="mendor-content">
-									<h3 class="title"><a href="profile.html">Jose Anderson</a></h3>
+									<h3 class="title"><a href="{% url 'profile' %}">Jose Anderson</a></h3>
 									<div class="mendor-course">
 										Digital Marketer
 									</div>
@@ -455,7 +570,7 @@
 							<!-- Course Item -->
 							<div class="col-12 col-md-6 col-lg-3 aos" data-aos="fade-up">
 								<div class="course-item">
-									<a href="search.html" class="course-img">
+									<a href="{% url 'search' %}" class="course-img">
 										<div class="image-col-merge">
 											<img src="{% static 'assets/img/course/course-01.jpg' %}" alt="learn">
 											<div class="course-text">
@@ -474,7 +589,7 @@
 							<!-- Course Item -->
 							<div class="col-12 col-md-6 col-lg-3 aos" data-aos="fade-up">
 								<div class="course-item">
-									<a href="search.html" class="course-img">
+									<a href="{% url 'search' %}" class="course-img">
 										<div class="image-col-merge">
 											<img src="{% static 'assets/img/course/course-02.jpg' %}" alt="learn">
 											<div class="course-text">
@@ -493,7 +608,7 @@
 							<!-- Course Item -->
 							<div class="col-12 col-md-6 col-lg-3 aos" data-aos="fade-up">
 								<div class="course-item">
-									<a href="search.html" class="course-img">
+									<a href="{% url 'search' %}" class="course-img">
 										<div class="image-col-merge">
 											<img src="{% static 'assets/img/course/course-03.jpg' %}" alt="learn">
 											<div class="course-text">
@@ -512,7 +627,7 @@
 							<!-- Course Item -->
 							<div class="col-12 col-md-6 col-lg-3 aos" data-aos="fade-up">
 								<div class="course-item">
-									<a href="search.html" class="course-img">
+									<a href="{% url 'search' %}" class="course-img">
 										<div class="image-col-merge">
 											<img src="{% static 'assets/img/course/course-04.jpg' %}" alt="learn">
 											<div class="course-text">
@@ -531,7 +646,7 @@
 							<!-- Course Item -->
 							<div class="col-12 col-md-6 col-lg-3 aos" data-aos="fade-up">
 								<div class="course-item">
-									<a href="search.html" class="course-img">
+									<a href="{% url 'search' %}" class="course-img">
 										<div class="image-col-merge">
 											<img src="{% static 'assets/img/course/course-05.jpg' %}" alt="learn">
 											<div class="course-text">
@@ -550,7 +665,7 @@
 							<!-- Course Item -->
 							<div class="col-12 col-md-6 col-lg-3 aos" data-aos="fade-up">
 								<div class="course-item">
-									<a href="search.html" class="course-img">
+									<a href="{% url 'search' %}" class="course-img">
 										<div class="image-col-merge">
 											<img src="{% static 'assets/img/course/course-06.jpg' %}" alt="learn">
 											<div class="course-text">
@@ -569,7 +684,7 @@
 							<!-- Course Item -->
 							<div class="col-12 col-md-6 col-lg-3 aos" data-aos="fade-up">
 								<div class="course-item">
-									<a href="search.html" class="course-img">
+									<a href="{% url 'search' %}" class="course-img">
 										<div class="image-col-merge">
 											<img src="{% static 'assets/img/course/course-07.jpg' %}" alt="learn">
 											<div class="course-text">
@@ -588,7 +703,7 @@
 							<!-- Course Item -->
 							<div class="col-12 col-md-6 col-lg-3 aos" data-aos="fade-up">
 								<div class="course-item">
-									<a href="search.html" class="course-img">
+									<a href="{% url 'search' %}" class="course-img">
 										<div class="image-col-merge">
 											<img src="{% static 'assets/img/course/course-08.jpg' %}" alt="learn">
 											<div class="course-text">
@@ -606,7 +721,7 @@
 							
 						</div>
 						<div class="view-all text-center aos" data-aos="fade-up">
-							<a href="search.html" class="btn btn-primary btn-view">View All</a>
+							<a href="{% url 'search' %}" class="btn btn-primary btn-view">View All</a>
 						</div>						
 					</div>
 				</div>
@@ -779,106 +894,6 @@
 			</section>
 			<!-- /Statistics Section -->
 
-			<!-- Blog Section -->
-		   <section class="section section-blogs-eight">
-				<div class="container">
-				
-					<!-- Section Header -->
-					<div class="section-header-eight text-center aos" data-aos="fade-up">
-						<span>LATEST</span>
-						<h2>Blogs & News</h2>
-						<p class="sub-title">Are you looking to join online institutions? Now it's very simple, Sign up with mentoring</p>
-						<div class="sec-dots">
-							 <span></span>
-							 <span></span>
-							 <span></span>
-						</div>
-					</div>
-					<!-- /Section Header -->
-					
-					<div class="row blog-grid-row justify-content-center">
-						<div class="col-md-6 col-lg-4 col-sm-12 aos" data-aos="fade-up">
-						
-							<!-- Blog Post -->
-							<div class="blog-card">
-								<div class="blog-card-image">
-									<a href="blog-details.html"><img class="img-fluid" src="{% static 'assets/img/blog/blog-01.jpg' %}" alt="Post Image"></a>
-								</div>
-								<div class="blog-card-content">
-									<div class="blog-month">04 <span>Dec</span></div>
-									<ul class="meta-item-eight">
-										<li>
-											<div class="post-author-eight">
-												<a href="blog-details.html"><span>Tyrone Roberts</span></a>
-											</div>
-										</li>										
-									</ul>
-									<h3 class="blog-title-eight"><a href="blog-details.html">What is Lorem Ipsum? Lorem Ipsum is simply</a></h3>
-									<p>Lorem ipsum dolor sit amet, consectetur em adipiscing elit, sed do eiusmod tempor.</p>
-									<a href="blog-details.html" class="read">Read more</a>
-								</div>
-							</div>
-							<!-- /Blog Post -->
-							
-						</div>
-						
-						<div class="col-md-6 col-lg-4 col-sm-12 aos" data-aos="fade-up">
-						
-							<!-- Blog Post -->
-							<div class="blog-card">
-								<div class="blog-card-image">
-									<a href="blog-details.html"><img class="img-fluid" src="{% static 'assets/img/blog/blog-16.jpg' %}" alt="Post Image"></a>
-								</div>
-								<div class="blog-card-content">
-									<div class="blog-month">05 <span>Jan</span></div>
-									<ul class="meta-item-eight">
-										<li>
-											<div class="post-author-eight">
-												<a href="blog-details.html"><span>Brittany Garcia</span></a>
-											</div>
-										</li>										
-									</ul>
-									<h3 class="blog-title-eight"><a href="blog-details.html">Contrary to popular belief, Lorem Ipsum is</a></h3>
-									<p>Lorem ipsum dolor sit amet, consectetur em adipiscing elit, sed do eiusmod tempor.</p>
-									<a href="blog-details.html" class="read">Read more</a>
-								</div>
-							</div>
-							<!-- /Blog Post -->
-							
-						</div>
-						
-						<div class="col-md-6 col-lg-4 col-sm-12 aos" data-aos="fade-up">
-						
-							<!-- Blog Post -->
-							<div class="blog-card">
-								<div class="blog-card-image">
-									<a href="blog-details.html"><img class="img-fluid" src="{% static 'assets/img/blog/blog-17.jpg' %}" alt="Post Image"></a>
-								</div>
-								<div class="blog-card-content">
-									<div class="blog-month">06 <span>May</span></div>
-									<ul class="meta-item-eight">
-										<li>
-											<div class="post-author-eight">
-												<a href="blog-details.html"><span>Allen Davis</span></a>
-											</div>
-										</li>										
-									</ul>
-									<h3 class="blog-title-eight"><a href="blog-details.html">The standard chunk of Lorem Ipsum used</a></h3>
-									<p>Lorem ipsum dolor sit amet, consectetur em adipiscing elit, sed do eiusmod tempor.</p>
-									<a href="blog-details.html" class="read">Read more</a>
-								</div>
-							</div>
-							<!-- /Blog Post -->
-							
-						</div>
-					</div>
-					<div class="view-all text-center aos" data-aos="fade-up"> 
-						<a href="blog-list.html" class="btn btn-primary btn-view">View All</a>
-					</div>
-				</div>
-			</section>
-			<!-- /Blog Section -->
-
 			<!-- Footer -->
 			<footer class="footer footer-eight">
 				
@@ -894,7 +909,7 @@
 										<img src="{% static 'assets/img/logo-white.png' %}" alt="logo">
 									</div>
 									<div class="footer-about-content">
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+										<p> We aim to create a supportive and inclusive community where mentors can share their expertise, guidance, and experiences, while mentees can access valuable insights and support to navigate their unique paths. </p>
 									</div>
 								</div>
 								<!-- /Footer Widget -->								
@@ -905,11 +920,11 @@
 								<div class="footer-widget footer-menu">
 									<h2 class="footer-title">For Mentee</h2>
 									<ul>
-										<li><a href="search.html">Search Mentors</a></li>
-										<li><a href="login.html">Login</a></li>
-										<li><a href="register.html">Register</a></li>
-										<li><a href="booking.html">Booking</a></li>
-										<li><a href="dashboard-mentee.html">Mentee Dashboard</a></li>
+										<li><a href="{% url 'search' %}">Search Mentors</a></li>
+										<li><a href="{% url 'login' %}">Login</a></li>
+										<li><a href="{% url 'register' %}">Register</a></li>
+										<li><a href="{% url 'booking' %}">Booking</a></li>
+										<li><a href="{% url 'menteedashboard' %}">Mentee Dashboard</a></li>
 									</ul>
 								</div>
 								<!-- /Footer Widget -->								
@@ -920,11 +935,11 @@
 								<div class="footer-widget footer-menu">
 									<h2 class="footer-title">For Mentors</h2>
 									<ul>
-										<li><a href="appointments.html">Appointments</a></li>
-										<li><a href="chat.html">Chat</a></li>
-										<li><a href="login.html">Login</a></li>
-										<li><a href="register.html">Register</a></li>
-										<li><a href="dashboard.html">Mentor Dashboard</a></li>
+										<li><a href="{% url 'appointments' %}">Appointments</a></li>
+										<li><a href="{% url 'chat' %}">Chat</a></li>
+										<li><a href="{% url 'login' %}">Login</a></li>
+										<li><a href="{% url 'register' %}">Register</a></li>
+										<li><a href="{% url 'menteedashboard' %}">Mentor Dashboard</a></li>
 									</ul>
 								</div>
 								<!-- /Footer Widget -->								
@@ -962,7 +977,8 @@
 							<div class="row">
 								<div class="col-md-6">
 									<div class="copyright-text">
-										<p class="mb-0">&copy; 2022 Mentoring. All rights reserved.</p>
+										<p class="mb-0">&copy; 2023
+											Mentoring. All rights reserved.</p>
 									</div>
 								</div>
 								<div class="col-md-6">									

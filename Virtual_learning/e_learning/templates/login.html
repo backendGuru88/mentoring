@@ -41,7 +41,7 @@
 									<h3>Login <span>Mentoring</span></h3>
 									<p class="text-muted">Access to our dashboard</p>
 								</div>
-								<form action="index.html">
+								<form action="{% url 'home' %}">
 									<div class="form-group">
 										<label class="form-control-label">Email Address</label>
 										<input type="email" class="form-control">
@@ -54,10 +54,10 @@
 										</div>
 									</div>
 									<div class="text-end">
-										<a class="forgot-link" href="forgot-password.html">Forgot Password ?</a>
+										<a class="forgot-link" href="{% url 'forgotpassword' %}">Forgot Password ?</a>
 									</div>
 									<button class="btn btn-primary login-btn" type="submit">Login</button>
-									<div class="text-center dont-have">Don’t have an account? <a href="register.html">Register</a></div>
+									<div class="text-center dont-have">Don’t have an account? <a href="{% url 'register' %}">Register</a></div>
 								</form>
 							</div>
 						</div>

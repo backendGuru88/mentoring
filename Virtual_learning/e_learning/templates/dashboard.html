@@ -1,4 +1,4 @@
-{% load static%}
+{% load static %}
 <!DOCTYPE html> 
 <html lang="en">
 	<head>
@@ -19,7 +19,7 @@
 		
 		<!-- Main CSS -->
 		<link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
-		
+	
 	</head>
 	<body>
 
@@ -53,28 +53,42 @@
 						</div>
 						<ul class="main-nav">
 							<li class="has-submenu">
-								<a href="{% url 'home' %}">Home <i class="fas fa-chevron-down"></i></a>
-								
+								<a href="{% url 'home' %}">Home </a>
+								<!-- <ul class="submenu">
+									<li><a href="index.html">Home</a></li>
+									<li><a href="index-two.html">Home 2</a></li>
+									<li><a href="index-three.html">Home 3</a></li>
+									<li><a href="index-four.html">Home 4</a></li>
+									<li><a href="index-five.html">Home 5</a></li>
+									<li><a href="index-six.html">Home 6</a></li>
+									<li><a href="index-seven.html">Home 7</a></li>
+								</ul> -->
 							</li>
-							<li class="has-submenu">
+							<li class="has-submenu active">
 								<a href="">Mentor <i class="fas fa-chevron-down"></i></a>
 								<ul class="submenu">
-									<li><a href="{% url 'dashboard' %}">Mentor Dashboard</a></li>
+									<li class="active"><a href="{% url 'dashboard' %}">Mentor Dashboard</a></li>
 									<li><a href="{% url 'booking' %}">Bookings</a></li>
 									<li><a href="{% url 'schedule' %}">Schedule Timing</a></li>
-									<!-- <li><a href="mentee-list.html">Mentee List</a></li>
-									<li><a href="profile-mentee.html">Mentee Profile</a></li> -->
-									<li class="has-submenu">
-										
+									<!-- <li><a href="mentee-list.html">Mentee List</a></li> -->
+									<li><a href="{% url 'menteeprofile' %}">Mentee Profile</a></li>
+									<!-- <li class="has-submenu">
+										<a href="blog.html">Blog</a>
+										<ul class="submenu">
+											<li><a href="blog.html">Blog</a></li>
+											<li><a href="blog-details.html">Blog View</a></li>
+											<li><a href="add-blog.html">Add Blog</a></li>
+											<li><a href="edit-blog.html">Edit Blog</a></li>
+										</ul> -->
 									</li>
-									<li><a href="{% url 'chat' %}">Chat</a></li>
+									<!-- <li><a href="chat.html">Chat</a></li> -->
 									<li><a href="{% url 'invoices' %}">Invoices</a></li>
 									<li><a href="{% url 'profilesettings' %}">Profile Settings</a></li>
 									<li><a href="{% url 'review' %}">Reviews</a></li>
 									<li><a href="{% url 'mentorregister' %}">Mentor Register</a></li>
 								</ul>
 							</li>	
-							<li class="has-submenu active">
+							<li class="has-submenu">
 								<a href="">Mentee <i class="fas fa-chevron-down"></i></a>
 								<ul class="submenu">
 									<li class="has-submenu">
@@ -93,7 +107,7 @@
 									<li><a href="{% url 'favourites' %}">Favourites</a></li>
 									<!-- <li><a href="chat-mentee.html">Chat</a></li>
 									<li><a href="profile-settings-mentee.html">Profile Settings</a></li> -->
-									<li class="active"><a href="{% url 'changepassword' %}">Change Password</a></li>
+									<li><a href="{% url 'changepassword' %}">Change Password</a></li>
 								</ul>
 							</li>	
 							<li class="has-submenu">
@@ -102,7 +116,7 @@
 									<li><a href="{% url 'voicecall' %}">Voice Call</a></li>
 									<li><a href="{% url 'videocall' %}">Video Call</a></li>
 									<li><a href="{% url 'search' %}">Search Mentors</a></li>
-									
+									<!-- <li><a href="components.html">Components</a></li> -->
 									<li class="has-submenu">
 										<a href="{% url 'invoices' %}">Invoices</a>
 										<ul class="submenu">
@@ -116,9 +130,14 @@
 									<li><a href="{% url 'forgotpassword' %}">Forgot Password</a></li>
 								</ul>
 							</li>
-							<li class="has-submenu">
-								
-							</li>
+							<!-- <li class="has-submenu">
+								<a href="">Blog <i class="fas fa-chevron-down"></i></a>
+								<ul class="submenu">
+									<li><a href="blog-list.html">Blog List</a></li>
+									<li><a href="blog-grid.html">Blog Grid</a></li>
+									<li><a href="blog-details.html">Blog Details</a></li>
+								</ul>
+							</li> -->
 							<li>
 								<a href="admin/index.html" target="_blank">Admin</a>
 							</li>
@@ -133,7 +152,7 @@
 						<li class="nav-item dropdown has-arrow logged-item">
 							<a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
 								<span class="user-img">
-									<img class="rounded-circle" src="{% static 'assets/img/user/user.jpg'" %}" width="31" alt="Darren Elder">
+									<img class="rounded-circle" src="{% static 'assets/img/user/user.jpg' %}" width="31" alt="Darren Elder">
 								</span>
 							</a>
 							<div class="dropdown-menu dropdown-menu-end">
@@ -146,7 +165,7 @@
 										<p class="text-muted mb-0">Mentor</p>
 									</div>
 								</div>
-								<a class="dropdown-item" href="{% url 'menteedashboard' %}">Dashboard</a>
+								<a class="dropdown-item" href="{% url 'dashboard' %}">Dashboard</a>
 								<a class="dropdown-item" href="{% url 'profilesettings' %}">Profile Settings</a>
 								<a class="dropdown-item" href="{% url 'login' %}">Logout</a>
 							</div>
@@ -167,10 +186,10 @@
 							<nav aria-label="breadcrumb" class="page-breadcrumb">
 								<ol class="breadcrumb">
 									<li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
-									<li class="breadcrumb-item active" aria-current="page">Change Password</li>
+									<li class="breadcrumb-item active" aria-current="page">Dashboard</li>
 								</ol>
 							</nav>
-							<h2 class="breadcrumb-title">Change Password</h2>
+							<h2 class="breadcrumb-title">Dashboard</h2>
 						</div>
 					</div>
 				</div>
@@ -180,6 +199,7 @@
 			<!-- Page Content -->
 			<div class="content">
 				<div class="container-fluid">
+
 					<div class="row">
 						<div class="col-md-5 col-lg-4 col-xl-3 theiaStickySidebar">
 						
@@ -208,52 +228,172 @@
 								</div>
 								<div class="custom-sidebar-nav">
 									<ul>
-										<li><a href="{% url 'menteedashboard' %}"><i class="fas fa-home"></i>Dashboard <span><i class="fas fa-chevron-right"></i></span></a></li>
+										<li><a href="{% url 'dashboard' %}" class="active"><i class="fas fa-home"></i>Dashboard <span><i class="fas fa-chevron-right"></i></span></a></li>
 										<li><a href="{% url 'booking' %}"><i class="fas fa-clock"></i>Bookings <span><i class="fas fa-chevron-right"></i></span></a></li>
 										<li><a href="{% url 'schedule' %}"><i class="fas fa-hourglass-start"></i>Schedule Timings <span><i class="fas fa-chevron-right"></i></span></a></li>
-										<li><a href="{% url 'chat' %}"><i class="fas fa-comments"></i>Messages <span><i class="fas fa-chevron-right"></i></span></a></li>
-
+										<!-- <li><a href="chat.html"><i class="fas fa-comments"></i>Messages <span><i class="fas fa-chevron-right"></i></span></a></li> -->
+										<li><a href="{% url 'invoices' %}"><i class="fas fa-file-invoice"></i>Invoices <span><i class="fas fa-chevron-right"></i></span></a></li>
+										<li><a href="{% url 'review' %}"><i class="fas fa-eye"></i>Reviews <span><i class="fas fa-chevron-right"></i></span></a></li>
+										<!-- <li><a href="blog.html"><i class="fab fa-blogger-b"></i>Blog <span><i class="fas fa-chevron-right"></i></span></a></li> -->
 										<li><a href="{% url 'profile' %}"><i class="fas fa-user-cog"></i>Profile <span><i class="fas fa-chevron-right"></i></span></a></li>
 										<li><a href="{% url 'login' %}"><i class="fas fa-sign-out-alt"></i>Logout <span><i class="fas fa-chevron-right"></i></span></a></li>
 									</ul>
 								</div>
 							</div>
 							<!-- /Sidebar -->
-							
+
 						</div>
 						
 						<div class="col-md-7 col-lg-8 col-xl-9">
-							<div class="card">
-								<div class="card-body">
-									<div class="row">
-										<div class="col-md-12 col-lg-6">
-										
-											<!-- Change Password Form -->
-											<form>
-												<div class="form-group">
-													<label>Old Password</label>
-													<input type="password" class="form-control">
-												</div>
-												<div class="form-group">
-													<label>New Password</label>
-													<input type="password" class="form-control">
-												</div>
-												<div class="form-group">
-													<label>Confirm Password</label>
-													<input type="password" class="form-control">
-												</div>
-												<div class="submit-section">
-													<button type="submit" class="btn btn-primary submit-btn">Save Changes</button>
-												</div>
-											</form>
-											<!-- /Change Password Form -->
-											
+
+							<div class="row">
+								<div class="col-md-12 col-lg-4 dash-board-list blue">
+									<div class="dash-widget">
+										<div class="circle-bar">
+											<div class="icon-col">
+												<i class="fas fa-users"></i>
+											</div>
+										</div>
+										<div class="dash-widget-info">
+											<h3>23</h3>
+											<h6>Members</h6>															
+										</div>
+									</div>
+								</div>
+								
+								<div class="col-md-12 col-lg-4 dash-board-list yellow">
+									<div class="dash-widget">
+										<div class="circle-bar">
+											<div class="icon-col">
+												<i class="fas fa-calendar-check"></i>
+											</div>
+										</div>
+										<div class="dash-widget-info">
+											<h3>33</h3>
+											<h6>Appointments</h6>															
+										</div>
+									</div>
+								</div>
+								
+								<div class="col-md-12 col-lg-4 dash-board-list pink">
+									<div class="dash-widget">
+										<div class="circle-bar">
+											<div class="icon-col">
+												<i class="fas fa-wallet"></i>
+											</div>
+										</div>
+										<div class="dash-widget-info">
+											<h3>$14</h3>
+											<h6>Total Earned</h6>															
 										</div>
 									</div>
 								</div>
 							</div>
+							
+							<div class="row">
+								<div class="col-md-12">
+									<h4 class="mb-4">Mentee Lists</h4>
+									<div class="card card-table">
+										<div class="card-body">
+											<div class="table-responsive">
+												<table class="table table-hover table-center mb-0">
+													<thead>
+														<tr>
+															<th>BASIC INFO</th>
+															<th>CREATED DATE</th>
+															<th class="text-center">TAGS</th>
+															<th class="text-center">ACTION</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>
+																<h2 class="table-avatar">
+																	<a href="{% url 'profile' %}" class="avatar avatar-sm me-2"><img class="avatar-img rounded-circle" src="{% static 'assets/img/user/user2.jpg' %}" alt="User Image"></a>
+																	<a href="{% url 'profile' %}">Tyrone Roberts<span>tyroneroberts@adobe.com</span></a>				
+																</h2>
+															</td>
+															<td>08 April 2020</td>
+															<td class="text-center"><span class="pending">PENDING</span></td>
+															<td class="text-center"><a href="{% url 'profile' %}" class="btn btn-sm bg-info-light"><i class="far fa-eye"></i> View</a></td>
+														</tr>
+														<tr>
+															<td>
+																<h2 class="table-avatar">
+																	<a href="{% url 'profile' %}" class="avatar avatar-sm me-2"><img class="avatar-img rounded-circle" src="{% static 'assets/img/user/user1.jpg' %}" alt="User Image"></a>
+																	<a href="{% url 'profile' %}">Julie Pennington <span>julie@adobe.com</span></a>				
+																</h2>
+															</td>
+															<td>08 April 2020</td>
+															<td class="text-center"><span class="pending">PENDING</span></td>
+															<td class="text-center"><a href="{% url 'profile' %}" class="btn btn-sm bg-info-light"><i class="far fa-eye"></i> View</a></td>
+														</tr>
+														<tr>
+															<td>
+																<h2 class="table-avatar">
+																	<a href="{% url 'profile' %}" class="avatar avatar-sm me-2"><img class="avatar-img rounded-circle" src="{% static 'assets/img/user/user3.jpg' %}" alt="User Image"></a>
+																	<a href="{% url 'profile' %}">Allen Davis <span>allendavis@adobe.com</span></a>				
+																</h2>
+															</td>
+															<td>08 April 2020</td>
+															<td class="text-center"><span class="pending">PENDING</span></td>
+															<td class="text-center"><a href="{% url 'profile' %}" class="btn btn-sm bg-info-light"><i class="far fa-eye"></i> View</a></td>
+														</tr>
+														<tr>
+															<td>
+																<h2 class="table-avatar">
+																	<a href="{% url 'profile' %}" class="avatar avatar-sm me-2"><img class="avatar-img rounded-circle" src="{% static 'assets/img/user/user4.jpg' %}" alt="User Image"></a>
+																	<a href="{% url 'profile' %}">Patricia Manzi <span>patriciamanzi@adobe.com</span></a>				
+																</h2>
+															</td>
+															<td>08 April 2020</td>
+															<td class="text-center"><span class="accept">ACCEPTED</span></td>
+															<td class="text-center"><a href="{% url 'profile' %}" class="btn btn-sm bg-info-light"><i class="far fa-eye"></i> View</a></td>
+														</tr>
+														<tr>
+															<td>
+																<h2 class="table-avatar">
+																	<a href="{% url 'profile' %}" class="avatar avatar-sm me-2"><img class="avatar-img rounded-circle" src="{% static 'assets/img/user/user5.jpg' %}" alt="User Image"></a>
+																	<a href="{% url 'profile' %}">Olive Lawrence <span>olivelawrence@adobe.com</span></a>				
+																</h2>
+															</td>
+															<td>08 April 2020</td>
+															<td class="text-center"><span class="accept">ACCEPTED</span></td>
+															<td class="text-center"><a href="{% url 'profile' %}" class="btn btn-sm bg-info-light"><i class="far fa-eye"></i> View</a></td>
+														</tr>
+														<tr>
+															<td>
+																<h2 class="table-avatar">
+																	<a href="{% url 'profile' %}" class="avatar avatar-sm me-2"><img class="avatar-img rounded-circle" src="{% static 'assets/img/user/user6.jpg' %}" alt="User Image"></a>
+																	<a href="{% url 'profile' %}">Frances Foster <span>frances@adobe.com</span></a>				
+																</h2>
+															</td>
+															<td>08 April 2020</td>
+															<td class="text-center"><span class="accept">ACCEPTED</span></td>
+															<td class="text-center"><a href="{% url 'profile' %}" class="btn btn-sm bg-info-light"><i class="far fa-eye"></i> View</a></td>
+														</tr>
+														<tr>
+															<td>
+																<h2 class="table-avatar">
+																	<a href="{% url 'profile' %}" class="avatar avatar-sm me-2"><img class="avatar-img rounded-circle" src="{% static 'assets/img/user/user7.jpg' %}" alt="User Image"></a>
+																	<a href="{% url 'profile' %}">Deloris Briscoe <span>delorisbriscoe@adobe.com</span></a>				
+																</h2>
+															</td>
+															<td>08 April 2020</td>
+															<td class="text-center"><span class="reject">REJECTED</span></td>
+															<td class="text-center"><a href="{% url 'profile' %}" class="btn btn-sm bg-info-light"><i class="far fa-eye"></i> View</a></td>
+														</tr>
+													</tbody>
+												</table>		
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
 						</div>
 					</div>
+
 				</div>
 
 			</div>		
@@ -324,7 +464,7 @@
 									<h2 class="footer-title">For Mentors</h2>
 									<ul>
 										<li><a href="{% url 'appointments' %}">Appointments</a></li>
-										<li><a href="{% url 'chat' %}">Chat</a></li>
+										<!-- <li><a href="chat.html">Chat</a></li> -->
 										<li><a href="{% url 'login' %}">Login</a></li>
 										<li><a href="{% url 'register' %}">Register</a></li>
 										<li><a href="{% url 'dashboard' %}">Mentor Dashboard</a></li>
@@ -364,7 +504,7 @@
 				<!-- /Footer Top -->
 				
 				<!-- Footer Bottom -->
-			    <div class="footer-bottom">
+                <div class="footer-bottom">
 					<div class="container-fluid">
 					
 						<!-- Copyright -->
@@ -391,7 +531,7 @@
 	  
 		<!-- jQuery -->
 		<script src="{% static 'assets/js/jquery-3.6.0.min.js' %}"></script>
-		
+				
 		<!-- Bootstrap Core JS -->
 		<script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
 		

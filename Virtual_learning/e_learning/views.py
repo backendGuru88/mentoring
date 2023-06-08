@@ -3,8 +3,6 @@ from django.shortcuts import render
 # Create your views here.
 def index(request):
     return render(request, 'index.html')
-def Home(request):
-    return render(request , 'index-two.html')
 def login(request):
     return render(request , 'login.html')
 def forgotpassword(request):
@@ -44,8 +42,18 @@ def profilesettings(request):
 def invoices(request):
     return render(request, 'invoices.html')
 def invoiceviews(request):
-    return render(request, 'invoice-views.html')
+    return render(request, 'invoice-view.html')
 def mapgrid(request):
     return render(request, 'map-grid.html')
 def maplist(request):
     return render(request, 'map-list.html')
+def checkout(request):
+    return render(request, 'checkout.html')
+def dashboard(request):
+    return render(request, 'dashboard.html')
+def menteeregister(request):
+    return render(request, 'mentee-register.html')
+def mentorregister(request):
+    return render(request, 'mentor-register.html')
+def menteeprofile(request):
+    return render(request, 'profile-mentee.html')

@@ -38,13 +38,13 @@
 								<span></span>
 							</span>
 						</a>
-						<a href="index.html" class="navbar-brand logo">
+						<a href="{% url 'home' %}" class="navbar-brand logo">
 							<img src="{% static 'assets/img/logo.png' %}" class="img-fluid" alt="Logo">
 						</a>
 					</div>
 					<div class="main-menu-wrapper">
 						<div class="menu-header">
-							<a href="index.html" class="menu-logo">
+							<a href="{% url 'home' %}" class="menu-logo">
 								<img src="{% static 'assets/img/logo.png' %}" class="img-fluid" alt="Logo">
 							</a>
 							<a id="menu_close" class="menu-close" href="javascript:void(0);">
@@ -53,39 +53,25 @@
 						</div>
 						<ul class="main-nav">
 							<li class="has-submenu">
-								<a href="index.html">Home <i class="fas fa-chevron-down"></i></a>
-								<ul class="submenu">
-									<li><a href="index.html">Home</a></li>
-									<li><a href="index-two.html">Home 2</a></li>
-									<li><a href="index-three.html">Home 3</a></li>
-									<li><a href="index-four.html">Home 4</a></li>
-									<li><a href="index-five.html">Home 5</a></li>
-									<li><a href="index-six.html">Home 6</a></li>
-									<li><a href="index-seven.html">Home 7</a></li>
-								</ul>
+								<a href="{% url 'home' %}">Home <i class="fas fa-chevron-down"></i></a>
+								
 							</li>
 							<li class="has-submenu">
 								<a href="">Mentor <i class="fas fa-chevron-down"></i></a>
 								<ul class="submenu">
-									<li><a href="dashboard.html">Mentor Dashboard</a></li>
-									<li><a href="bookings.html">Bookings</a></li>
-									<li><a href="schedule-timings.html">Schedule Timing</a></li>
-									<li><a href="mentee-list.html">Mentee List</a></li>
-									<li><a href="profile-mentee.html">Mentee Profile</a></li>
+									<li><a href="{% url 'dashboard' %}">Mentor Dashboard</a></li>
+									<li><a href="{% url 'booking' %}">Bookings</a></li>
+									<li><a href="{% url 'schedule' %}">Schedule Timing</a></li>
+									<!-- <li><a href="mentee-list.html">Mentee List</a></li> -->
+									<li><a href="{% url 'menteeprofile' %}">Mentee Profile</a></li>
 									<li class="has-submenu">
-										<a href="blog.html">Blog</a>
-										<ul class="submenu">
-											<li><a href="blog.html">Blog</a></li>
-											<li><a href="blog-details.html">Blog View</a></li>
-											<li><a href="add-blog.html">Add Blog</a></li>
-											<li><a href="edit-blog.html">Edit Blog</a></li>
-										</ul>
+										
 									</li>
-									<li><a href="chat.html">Chat</a></li>
-									<li><a href="invoices.html">Invoices</a></li>
-									<li><a href="profile-settings.html">Profile Settings</a></li>
-									<li><a href="reviews.html">Reviews</a></li>
-									<li><a href="mentor-register.html">Mentor Register</a></li>
+									<!-- <li><a href="chat.html">Chat</a></li> -->
+									<li><a href="{% url 'invoices' %}">Invoices</a></li>
+									<li><a href="{% url 'profilesettings' %}">Profile Settings</a></li>
+									<li><a href="{% url 'review' %}">Reviews</a></li>
+									<li><a href="{% url 'mentorregister' %}">Mentor Register</a></li>
 								</ul>
 							</li>	
 							<li class="has-submenu active">
@@ -94,55 +80,50 @@
 									<li class="has-submenu">
 										<a href="#">Mentors</a>
 										<ul class="submenu">
-											<li><a href="map-grid.html">Map Grid</a></li>
-											<li><a href="map-list.html">Map List</a></li>
+											<li><a href="{% url 'mapgrid' %}">Map Grid</a></li>
+											<li><a href="{% url 'maplist' %}">Map List</a></li>
 										</ul>
 									</li>
-									<li><a href="search.html">Search Mentor</a></li>
-									<li><a href="profile.html">Mentor Profile</a></li>
-									<li><a href="bookings-mentee.html">Bookings</a></li>
-									<li><a href="checkout.html">Checkout</a></li>
-									<li><a href="booking-success.html">Booking Success</a></li>
-									<li><a href="dashboard-mentee.html">Mentee Dashboard</a></li>
-									<li class="active"><a href="favourites.html">Favourites</a></li>
-									<li><a href="chat-mentee.html">Chat</a></li>
-									<li><a href="profile-settings-mentee.html">Profile Settings</a></li>
-									<li><a href="change-password.html">Change Password</a></li>
+									<li><a href="{% url 'search' %}">Search Mentor</a></li>
+									<li><a href="{% url 'profile' %}">Mentor Profile</a></li>
+									<!-- <li><a href="bookings-mentee.html">Bookings</a></li> -->
+									<li><a href="{% url 'checkout' %}">Checkout</a></li>
+									<!-- <li><a href="booking-success.html">Booking Success</a></li> -->
+									<li><a href="{% url 'menteedashboard' %}">Mentee Dashboard</a></li>
+									<li class="active"><a href="{% url 'favourites' %}">Favourites</a></li>
+									<!-- <li><a href="chat-mentee.html">Chat</a></li>
+									<li><a href="profile-settings-mentee.html">Profile Settings</a></li> -->
+									<li><a href="{% url 'changepassword' %}">Change Password</a></li>
 								</ul>
 							</li>	
 							<li class="has-submenu">
 								<a href="">Pages <i class="fas fa-chevron-down"></i></a>
 								<ul class="submenu">
-									<li><a href="voice-call.html">Voice Call</a></li>
-									<li><a href="video-call.html">Video Call</a></li>
-									<li><a href="search.html">Search Mentors</a></li>
-									<li><a href="components.html">Components</a></li>
+									<li><a href="{% url 'voicecall' %}">Voice Call</a></li>
+									<li><a href="{% url 'videocall' %}">Video Call</a></li>
+									<li><a href="{% url 'search' %}">Search Mentors</a></li>
+									<!-- <li><a href="components.html">Components</a></li> -->
 									<li class="has-submenu">
-										<a href="invoices.html">Invoices</a>
+										<a href="{% url 'invoices' %}">Invoices</a>
 										<ul class="submenu">
-											<li><a href="invoices.html">Invoices</a></li>
-											<li><a href="invoice-view.html">Invoice View</a></li>
+											<li><a href="{% url 'invoices' %}">Invoices</a></li>
+											<li><a href="{% url 'invoiceviews' %}">Invoice View</a></li>
 										</ul>
 									</li>
-									<li><a href="blank-page.html">Starter Page</a></li>
-									<li><a href="login.html">Login</a></li>
-									<li><a href="register.html">Register</a></li>
-									<li><a href="forgot-password.html">Forgot Password</a></li>
+									<!-- <li><a href="blank-page.html">Starter Page</a></li> -->
+									<li><a href="{% url 'login' %}">Login</a></li>
+									<li><a href="{% url 'register' %}">Register</a></li>
+									<li><a href="{% url 'forgotpassword' %}">Forgot Password</a></li>
 								</ul>
 							</li>
 							<li class="has-submenu">
-								<a href="">Blog <i class="fas fa-chevron-down"></i></a>
-								<ul class="submenu">
-									<li><a href="blog-list.html">Blog List</a></li>
-									<li><a href="blog-grid.html">Blog Grid</a></li>
-									<li><a href="blog-details.html">Blog Details</a></li>
-								</ul>
+								
 							</li>
 							<li>
 								<a href="admin/index.html" target="_blank">Admin</a>
 							</li>
 							<li class="login-link">
-								<a href="login.html">Login / Signup</a>
+								<a href="{% url 'login' %}">Login / Signup</a>
 							</li>
 						</ul>		 
 					</div>		 
@@ -165,9 +146,9 @@
 										<p class="text-muted mb-0">Mentor</p>
 									</div>
 								</div>
-								<a class="dropdown-item" href="dashboard.html">Dashboard</a>
-								<a class="dropdown-item" href="profile-settings.html">Profile Settings</a>
-								<a class="dropdown-item" href="login.html">Logout</a>
+								<a class="dropdown-item" href="{% url 'dashboard' %}">Dashboard</a>
+								<a class="dropdown-item" href="{% url 'profilesettings' %}">Profile Settings</a>
+								<a class="dropdown-item" href="{% url 'login' %}">Logout</a>
 							</div>
 						</li>
 						<!-- /User Menu -->
@@ -185,7 +166,7 @@
 						<div class="col-md-8 col-12">
 							<nav aria-label="breadcrumb" class="page-breadcrumb">
 								<ol class="breadcrumb">
-									<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+									<li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
 									<li class="breadcrumb-item active" aria-current="page">Favourites</li>
 								</ol>
 							</nav>
@@ -235,12 +216,12 @@
 								</div>
 								<div class="custom-sidebar-nav">
 									<ul>
-										<li><a href="dashboard-mentee.html"><i class="fas fa-home"></i>Dashboard <span><i class="fas fa-chevron-right"></i></span></a></li>
-										<li><a href="bookings-mentee.html"><i class="fas fa-clock"></i>Bookings <span><i class="fas fa-chevron-right"></i></span></a></li>
-										<li><a href="chat-mentee.html"><i class="fas fa-comments"></i>Messages <span><i class="fas fa-chevron-right"></i></span></a></li>
-										<li><a href="favourites.html" class="active"><i class="fas fa-star"></i>Favourites <span><i class="fas fa-chevron-right"></i></span></a></li>
-										<li><a href="profile-mentee.html"><i class="fas fa-user-cog"></i>Profile <span><i class="fas fa-chevron-right"></i></span></a></li>
-										<li><a href="login.html"><i class="fas fa-sign-out-alt"></i>Logout <span><i class="fas fa-chevron-right"></i></span></a></li>
+										<li><a href="{% url 'menteedashboard' %}"><i class="fas fa-home"></i>Dashboard <span><i class="fas fa-chevron-right"></i></span></a></li>
+										<!-- <li><a href="bookings-mentee.html"><i class="fas fa-clock"></i>Bookings <span><i class="fas fa-chevron-right"></i></span></a></li>
+										<li><a href="chat-mentee.html"><i class="fas fa-comments"></i>Messages <span><i class="fas fa-chevron-right"></i></span></a></li> -->
+										<li><a href="{% url 'favourites' %}" class="active"><i class="fas fa-star"></i>Favourites <span><i class="fas fa-chevron-right"></i></span></a></li>
+										<li><a href="{% url 'menteeprofile' %}"><i class="fas fa-user-cog"></i>Profile <span><i class="fas fa-chevron-right"></i></span></a></li>
+										<li><a href="{% url 'login' %}"><i class="fas fa-sign-out-alt"></i>Logout <span><i class="fas fa-chevron-right"></i></span></a></li>
 									</ul>
 								</div>
 							</div>
@@ -252,7 +233,7 @@
 								<div class="col-md-6 col-lg-4 col-xl-3">
 									<div class="profile-widget">
 										<div class="user-avatar">
-											<a href="profile.html">
+											<a href="{% url 'profile' %}">
 												<img class="img-fluid" alt="User Image" src="{% static 'assets/img/user/user.jpg' %}">
 											</a>
 											<a href="javascript:void(0)" class="fav-btn">
@@ -261,7 +242,7 @@
 										</div>
 										<div class="pro-content">
 											<h3 class="title">
-												<a href="profile.html">Ruby Perrin</a> 
+												<a href="{% url 'profile' %}">Ruby Perrin</a> 
 												<i class="fas fa-check-circle verified"></i>
 											</h3>
 											<p class="speciality">Digital Marketer</p>
@@ -286,10 +267,10 @@
 											</ul>
 											<div class="row row-sm">
 												<div class="col-6">
-													<a href="profile.html" class="btn view-btn">View Profile</a>
+													<a href="{% url 'profile' %}" class="btn view-btn">View Profile</a>
 												</div>
 												<div class="col-6">
-													<a href="booking.html" class="btn book-btn">Book Now</a>
+													<a href="{% url 'booking' %}" class="btn book-btn">Book Now</a>
 												</div>
 											</div>
 										</div>
@@ -299,7 +280,7 @@
 								<div class="col-md-6 col-lg-4 col-xl-3">
 									<div class="profile-widget">
 										<div class="user-avatar">
-											<a href="profile.html">
+											<a href="{% url 'profile' %}">
 												<img class="img-fluid" alt="User Image" src="{% static 'assets/img/user/user1.jpg' %}">
 											</a>
 											<a href="javascript:void(0)" class="fav-btn">
@@ -308,7 +289,7 @@
 										</div>
 										<div class="pro-content">
 											<h3 class="title">
-												<a href="profile.html">Darren Elder</a> 
+												<a href="{% url 'profile' %}">Darren Elder</a> 
 												<i class="fas fa-check-circle verified"></i>
 											</h3>
 											<p class="speciality">UNIX, Calculus, Trigonometry</p>
@@ -333,10 +314,10 @@
 											</ul>
 											<div class="row row-sm">
 												<div class="col-6">
-													<a href="profile.html" class="btn view-btn">View Profile</a>
+													<a href="{% url 'profile' %}" class="btn view-btn">View Profile</a>
 												</div>
 												<div class="col-6">
-													<a href="booking.html" class="btn book-btn">Book Now</a>
+													<a href="{% url 'booking' %}" class="btn book-btn">Book Now</a>
 												</div>
 											</div>
 										</div>
@@ -346,7 +327,7 @@
 								<div class="col-md-6 col-lg-4 col-xl-3">
 									<div class="profile-widget">
 										<div class="user-avatar">
-											<a href="profile.html">
+											<a href="{% url 'profile' %}">
 												<img class="img-fluid" alt="User Image" src="{% static 'assets/img/user/user2.jpg' %}">
 											</a>
 											<a href="javascript:void(0)" class="fav-btn">
@@ -355,7 +336,7 @@
 										</div>
 										<div class="pro-content">
 											<h3 class="title">
-												<a href="profile.html">Deborah Angel</a> 
+												<a href="{% url 'profile' %}">Deborah Angel</a> 
 												<i class="fas fa-check-circle verified"></i>
 											</h3>
 											<p class="speciality">Computer Programming</p>
@@ -380,10 +361,10 @@
 											</ul>
 											<div class="row row-sm">
 												<div class="col-6">
-													<a href="profile.html" class="btn view-btn">View Profile</a>
+													<a href="{% url 'profile' %}" class="btn view-btn">View Profile</a>
 												</div>
 												<div class="col-6">
-													<a href="booking.html" class="btn book-btn">Book Now</a>
+													<a href="{% url 'booking' %}" class="btn book-btn">Book Now</a>
 												</div>
 											</div>
 										</div>
@@ -393,7 +374,7 @@
 								<div class="col-md-6 col-lg-4 col-xl-3">
 									<div class="profile-widget">
 										<div class="user-avatar">
-											<a href="profile.html">
+											<a href="{% url 'profile' %}">
 												<img class="img-fluid" alt="User Image" src="{% static 'assets/img/user/user3.jpg' %}">
 											</a>
 											<a href="javascript:void(0)" class="fav-btn">
@@ -402,7 +383,7 @@
 										</div>
 										<div class="pro-content">
 											<h3 class="title">
-												<a href="profile.html">Sofia Brient</a> 
+												<a href="{% url 'profile' %}">Sofia Brient</a> 
 												<i class="fas fa-check-circle verified"></i>
 											</h3>
 											<p class="speciality">ASP.NET,Computer Gaming</p>
@@ -427,10 +408,10 @@
 											</ul>
 											<div class="row row-sm">
 												<div class="col-6">
-													<a href="profile.html" class="btn view-btn">View Profile</a>
+													<a href="{% url 'profile' %}" class="btn view-btn">View Profile</a>
 												</div>
 												<div class="col-6">
-													<a href="booking.html" class="btn book-btn">Book Now</a>
+													<a href="{% url 'booking' %}" class="btn book-btn">Book Now</a>
 												</div>
 											</div>
 										</div>
@@ -440,7 +421,7 @@
 								<div class="col-md-6 col-lg-4 col-xl-3">
 									<div class="profile-widget">
 										<div class="user-avatar">
-											<a href="profile.html">
+											<a href="{% url 'profile' %}">
 												<img class="img-fluid" alt="User Image" src="{% static 'assets/img/user/user4.jpgrr5' %}">
 											</a>
 											<a href="javascript:void(0)" class="fav-btn">
@@ -449,7 +430,7 @@
 										</div>
 										<div class="pro-content">
 											<h3 class="title">
-												<a href="profile.html">Marvin Campbell</a> 
+												<a href="{% url 'profile' %}">Marvin Campbell</a> 
 												<i class="fas fa-check-circle verified"></i>
 											</h3>
 											<p class="speciality">Digital Marketer</p>
@@ -475,10 +456,10 @@
 											</ul>
 											<div class="row row-sm">
 												<div class="col-6">
-													<a href="profile.html" class="btn view-btn">View Profile</a>
+													<a href="{% url 'profile' %}" class="btn view-btn">View Profile</a>
 												</div>
 												<div class="col-6">
-													<a href="booking.html" class="btn book-btn">Book Now</a>
+													<a href="{% url 'booking' %}" class="btn book-btn">Book Now</a>
 												</div>
 											</div>
 										</div>
@@ -488,7 +469,7 @@
 								<div class="col-md-6 col-lg-4 col-xl-3">
 									<div class="profile-widget">
 										<div class="user-avatar">
-											<a href="profile.html">
+											<a href="{% url 'profile' %}">
 												<img class="img-fluid" alt="User Image" src="{% static 'assets/img/user/user5.jpg' %}">
 											</a>
 											<a href="javascript:void(0)" class="fav-btn">
@@ -497,7 +478,7 @@
 										</div>
 										<div class="pro-content">
 											<h3 class="title">
-												<a href="profile.html">Katharine Berthold</a> 
+												<a href="{% url 'profile' %}">Katharine Berthold</a> 
 												<i class="fas fa-check-circle verified"></i>
 											</h3>
 											<p class="speciality">UNIX, Calculus, Trigonometry</p>
@@ -523,10 +504,10 @@
 											</ul>
 											<div class="row row-sm">
 												<div class="col-6">
-													<a href="profile.html" class="btn view-btn">View Profile</a>
+													<a href="{% url 'profile' %}" class="btn view-btn">View Profile</a>
 												</div>
 												<div class="col-6">
-													<a href="booking.html" class="btn book-btn">Book Now</a>
+													<a href="{% url 'booking' %}" class="btn book-btn">Book Now</a>
 												</div>
 											</div>
 										</div>
@@ -536,7 +517,7 @@
 								<div class="col-md-6 col-lg-4 col-xl-3">
 									<div class="profile-widget">
 										<div class="user-avatar">
-											<a href="profile.html">
+											<a href="{% url 'profile' %}">
 												<img class="img-fluid" alt="User Image" src="{% static 'assets/img/user/user6.jpg' %}">
 											</a>
 											<a href="javascript:void(0)" class="fav-btn">
@@ -545,7 +526,7 @@
 										</div>
 										<div class="pro-content">
 											<h3 class="title">
-												<a href="profile.html">Linda Tobin</a> 
+												<a href="{% url 'profile' %}">Linda Tobin</a> 
 												<i class="fas fa-check-circle verified"></i>
 											</h3>
 											<p class="speciality">General Course</p>
@@ -571,10 +552,10 @@
 											</ul>
 											<div class="row row-sm">
 												<div class="col-6">
-													<a href="profile.html" class="btn view-btn">View Profile</a>
+													<a href="{% url 'profile' %}" class="btn view-btn">View Profile</a>
 												</div>
 												<div class="col-6">
-													<a href="booking.html" class="btn book-btn">Book Now</a>
+													<a href="{% url 'booking' %}" class="btn book-btn">Book Now</a>
 												</div>
 											</div>
 										</div>
@@ -584,7 +565,7 @@
 								<div class="col-md-6 col-lg-4 col-xl-3">
 									<div class="profile-widget">
 										<div class="user-avatar">
-											<a href="profile.html">
+											<a href="{% url 'profile' %}">
 												<img class="img-fluid" alt="User Image" src="{% static 'assets/img/user/user7.jpg' %}">
 											</a>
 											<a href="javascript:void(0)" class="fav-btn">
@@ -593,7 +574,7 @@
 										</div>
 										<div class="pro-content">
 											<h3 class="title">
-												<a href="profile.html">Paul Richard</a> 
+												<a href="{% url 'profile' %}">Paul Richard</a> 
 												<i class="fas fa-check-circle verified"></i>
 											</h3>
 											<p class="speciality">ASP.NET,Computer Gaming</p>
@@ -619,10 +600,10 @@
 											</ul>
 											<div class="row row-sm">
 												<div class="col-6">
-													<a href="profile.html" class="btn view-btn">View Profile</a>
+													<a href="{% url 'profile' %}" class="btn view-btn">View Profile</a>
 												</div>
 												<div class="col-6">
-													<a href="booking.html" class="btn book-btn">Book Now</a>
+													<a href="{% url 'booking' %}" class="btn book-btn">Book Now</a>
 												</div>
 											</div>
 										</div>
@@ -632,7 +613,7 @@
 								<div class="col-md-6 col-lg-4 col-xl-3">
 									<div class="profile-widget">
 										<div class="user-avatar">
-											<a href="profile.html">
+											<a href="{% url 'profile' %}">
 												<img class="img-fluid" alt="User Image" src="{% static 'assets/img/user/user8.jpg' %}">
 											</a>
 											<a href="javascript:void(0)" class="fav-btn">
@@ -641,7 +622,7 @@
 										</div>
 										<div class="pro-content">
 											<h3 class="title">
-												<a href="profile.html">John Gibbs</a> 
+												<a href="{% url 'profile' %}">John Gibbs</a> 
 												<i class="fas fa-check-circle verified"></i>
 											</h3>
 											<p class="speciality">Digital Marketer</p>
@@ -667,10 +648,10 @@
 											</ul>
 											<div class="row row-sm">
 												<div class="col-6">
-													<a href="profile.html" class="btn view-btn">View Profile</a>
+													<a href="{% url 'profile' %}" class="btn view-btn">View Profile</a>
 												</div>
 												<div class="col-6">
-													<a href="booking.html" class="btn book-btn">Book Now</a>
+													<a href="{% url 'booking' %}" class="btn book-btn">Book Now</a>
 												</div>
 											</div>
 										</div>
@@ -680,7 +661,7 @@
 								<div class="col-md-6 col-lg-4 col-xl-3">
 									<div class="profile-widget">
 										<div class="user-avatar">
-											<a href="profile.html">
+											<a href="{% url 'profile' %}">
 												<img class="img-fluid" alt="User Image" src="{% static 'assets/img/user/user9.jpg' %}">
 											</a>
 											<a href="javascript:void(0)" class="fav-btn">
@@ -689,7 +670,7 @@
 										</div>
 										<div class="pro-content">
 											<h3 class="title">
-												<a href="profile.html">Olga Barlow</a> 
+												<a href="{% url 'profile' %}">Olga Barlow</a> 
 												<i class="fas fa-check-circle verified"></i>
 											</h3>
 											<p class="speciality">Digital Marketer</p>
@@ -715,10 +696,10 @@
 											</ul>
 											<div class="row row-sm">
 												<div class="col-6">
-													<a href="profile.html" class="btn view-btn">View Profile</a>
+													<a href="{% url 'profile' %}" class="btn view-btn">View Profile</a>
 												</div>
 												<div class="col-6">
-													<a href="booking.html" class="btn book-btn">Book Now</a>
+													<a href="{% url 'booking' %}" class="btn book-btn">Book Now</a>
 												</div>
 											</div>
 										</div>
@@ -728,7 +709,7 @@
 								<div class="col-md-6 col-lg-4 col-xl-3">
 									<div class="profile-widget">
 										<div class="user-avatar">
-											<a href="profile.html">
+											<a href="{% url 'profile' %}">
 												<img class="img-fluid" alt="User Image" src="{% static 'assets/img/user/user10.jpg' %}">
 											</a>
 											<a href="javascript:void(0)" class="fav-btn">
@@ -737,7 +718,7 @@
 										</div>
 										<div class="pro-content">
 											<h3 class="title">
-												<a href="profile.html">Julia Washington</a> 
+												<a href="{% url 'profile' %}">Julia Washington</a> 
 												<i class="fas fa-check-circle verified"></i>
 											</h3>
 											<p class="speciality">UNIX, Calculus, Trigonometry</p>
@@ -763,10 +744,10 @@
 											</ul>
 											<div class="row row-sm">
 												<div class="col-6">
-													<a href="profile.html" class="btn view-btn">View Profile</a>
+													<a href="{% url 'profile' %}" class="btn view-btn">View Profile</a>
 												</div>
 												<div class="col-6">
-													<a href="booking.html" class="btn book-btn">Book Now</a>
+													<a href="{% url 'booking' %}" class="btn book-btn">Book Now</a>
 												</div>
 											</div>
 										</div>
@@ -776,7 +757,7 @@
 								<div class="col-md-6 col-lg-4 col-xl-3">
 									<div class="profile-widget">
 										<div class="user-avatar">
-											<a href="profile.html">
+											<a href="{% url 'profile' %}">
 												<img class="img-fluid" alt="User Image" src="{% static 'assets/img/user/user11.jpg' %}">
 											</a>
 											<a href="javascript:void(0)" class="fav-btn">
@@ -785,7 +766,7 @@
 										</div>
 										<div class="pro-content">
 											<h3 class="title">
-												<a href="profile.html">Shaun Aponte</a> 
+												<a href="{% url 'profile' %}">Shaun Aponte</a> 
 												<i class="fas fa-check-circle verified"></i>
 											</h3>
 											<p class="speciality">Diploma in (DLO)</p>
@@ -811,10 +792,10 @@
 											</ul>
 											<div class="row row-sm">
 												<div class="col-6">
-													<a href="profile.html" class="btn view-btn">View Profile</a>
+													<a href="{% url 'profile' %}" class="btn view-btn">View Profile</a>
 												</div>
 												<div class="col-6">
-													<a href="booking.html" class="btn book-btn">Book Now</a>
+													<a href="{% url 'booking' %}" class="btn book-btn">Book Now</a>
 												</div>
 											</div>
 										</div>
@@ -899,11 +880,11 @@
 								<div class="footer-widget footer-menu">
 									<h2 class="footer-title">For Mentee</h2>
 									<ul>
-										<li><a href="search.html">Search Mentors</a></li>
-										<li><a href="login.html">Login</a></li>
-										<li><a href="register.html">Register</a></li>
-										<li><a href="booking.html">Booking</a></li>
-										<li><a href="dashboard-mentee.html">Mentee Dashboard</a></li>
+										<li><a href="{% url 'search' %}">Search Mentors</a></li>
+										<li><a href="{% url 'login' %}">Login</a></li>
+										<li><a href="{% url 'register' %}">Register</a></li>
+										<li><a href="{% url 'booking' %}">Booking</a></li>
+										<li><a href="{% url 'menteedashboard' %}">Mentee Dashboard</a></li>
 									</ul>
 								</div>
 								<!-- /Footer Widget -->
@@ -916,11 +897,11 @@
 								<div class="footer-widget footer-menu">
 									<h2 class="footer-title">For Mentors</h2>
 									<ul>
-										<li><a href="appointments.html">Appointments</a></li>
-										<li><a href="chat.html">Chat</a></li>
-										<li><a href="login.html">Login</a></li>
-										<li><a href="register.html">Register</a></li>
-										<li><a href="dashboard.html">Mentor Dashboard</a></li>
+										<li><a href="{% url 'appointments' %}">Appointments</a></li>
+										<!-- <li><a href="chat.html">Chat</a></li> -->
+										<li><a href="{% url 'login' %}">Login</a></li>
+										<li><a href="{% url 'register' %}">Register</a></li>
+										<li><a href="{% url 'dashboard' %}">Mentor Dashboard</a></li>
 									</ul>
 								</div>
 								<!-- /Footer Widget -->
@@ -965,7 +946,7 @@
 							<div class="row">
 								<div class="col-12 text-center">
 									<div class="copyright-text">
-										<p class="mb-0">&copy; 2020 Mentoring. All rights reserved.</p>
+										<p class="mb-0">&copy; 2023 Mentoring. All rights reserved.</p>
 									</div>
 								</div>
 							</div>
