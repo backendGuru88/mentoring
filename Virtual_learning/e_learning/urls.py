@@ -30,5 +30,10 @@ urlpatterns = [
     path("menteeregister", views.menteeregister, name='menteeregister'),
     path("mentorregister", views.mentorregister, name='mentorregister'),
     path("menteeprofile", views.menteeprofile, name='menteeprofile'),
+    path("bookingmentee", views.bookingmentee, name='bookingmentee'),
+    path("bookingsuccess", views.bookingsuccess, name='bookingsuccess'),
+    path("menteesettings", views.menteesettings, name='menteesettings'),
+    path("component", views.component, name='component'),
+    path("menteelist", views.menteelist, name='menteelist'),
     
 ]

@@ -69,8 +69,8 @@
 								<ul class="submenu">
 									<li><a href="{% url 'dashboard' %}">Mentor Dashboard</a></li>
 									<li><a href="{% url 'booking' %}">Bookings</a></li>
-									<!-- <li><a href="schedule-timings.html">Schedule Timing</a></li>
-									<li><a href="mentee-list.html">Mentee List</a></li> -->
+									<li><a href="{% url 'schedule' %}">Schedule Timing</a></li>
+									<li><a href="{% url 'menteelist' %}">Mentee List</a></li>
 									<li><a href="{% url 'menteeprofile' %}">Mentee Profile</a></li>
 									<!-- <li class="has-submenu">
 										<a href="blog.html">Blog</a>
@@ -100,13 +100,13 @@
 									</li>
 									<li><a href="{% url 'search' %}">Search Mentor</a></li>
 									<li><a href="{% url 'profile' %}">Mentor Profile</a></li>
-									<!-- <li><a href="bookings-mentee.html">Bookings</a></li> -->
+									<li><a href="{% url 'bookingmentee' %}">Bookings</a></li>
 									<li><a href="{% url 'checkout' %}">Checkout</a></li>
-									<!-- <li><a href="booking-success.html">Booking Success</a></li> -->
+									<li><a href="{% url 'bookingsuccess' %}">Booking Success</a></li>
 									<li><a href="{% url 'menteeprofile' %}">Mentee Dashboard</a></li>
 									<li><a href="{% url 'favourites' %}">Favourites</a></li>
-									<!-- <li><a href="chat-mentee.html">Chat</a></li>
-									<li><a href="profile-settings-mentee.html">Profile Settings</a></li> -->
+									<!-- <li><a href="chat-mentee.html">Chat</a></li> -->
+									<li><a href="{% url 'menteesettings' %}">Profile Settings</a></li>
 									<li><a href="{% url 'changepassword' %}">Change Password</a></li>
 								</ul>
 							</li>	
@@ -116,7 +116,7 @@
 									<li><a href="{% url 'voicecall' %}">Voice Call</a></li>
 									<li><a href="{% url 'videocall' %}">Video Call</a></li>
 									<li><a href="{% url 'search' %}">Search Mentors</a></li>
-									<!-- <li><a href="components.html">Components</a></li> -->
+									<li><a href="{% url 'component' %}">Components</a></li>
 									<li class="has-submenu">
 										<a href="{% url 'invoices' %}">Invoices</a>
 										<ul class="submenu">
@@ -349,7 +349,7 @@
 										<img src="{% static 'assets/img/logo.png' %}" alt="logo">
 									</div>
 									<div class="footer-about-content">
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+										<p> We aim to create a supportive and inclusive community where mentors can share their expertise, guidance, and experiences, while mentees can access valuable insights and support to navigate their unique paths. </p>
 										<div class="social-icon">
 											<ul>
 												<li>
@@ -447,7 +447,7 @@
 							<div class="row">
 								<div class="col-12 text-center">
 									<div class="copyright-text">
-										<p class="mb-0">&copy; 2020 Mentoring. All rights reserved.</p>
+										<p class="mb-0">&copy; 2023 Mentoring. All rights reserved.</p>
 									</div>
 								</div>
 							</div>

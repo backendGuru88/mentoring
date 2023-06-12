@@ -15,7 +15,7 @@
 		
 		<!-- Fontawesome CSS -->
 		<link rel="stylesheet" href="{% static 'assets/plugins/fontawesome/css/fontawesome.min.css' %}">
-		<link rel="stylesheet" href=" b  ">
+		<link rel="stylesheet" href="{% static 'assets/plugins/fontawesome/css/all.min.css' %} ">
 		
 		<!-- Main CSS -->
 		<link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
@@ -61,7 +61,7 @@
 									<li><a href="{% url 'dashboard' %}">Mentor Dashboard</a></li>
 									<li><a href="{% url 'booking' %}">Bookings</a></li>
 									<li><a href="{% url 'schedule' %}">Schedule Timing</a></li>
-									<li><a href="mentee-list.html">Mentee List</a></li>
+									<li><a href="{% url 'menteelist' %}">Mentee List</a></li>
 									<li><a href="{% url 'menteeprofile' %}">Mentee Profile</a></li>
 									
 									<li><a href="{% url 'invoices' %}">Invoices</a></li>
@@ -82,12 +82,12 @@
 									</li>
 									<li><a href="{% url 'search' %}">Search Mentor</a></li>
 									<li><a href="{% url 'profile' %}">Mentor Profile</a></li>
-									<li><a href="bookings-mentee.html">Bookings</a></li>
+									<li><a href="{% url 'bookingmentee' %}">Bookings</a></li>
 									<li><a href="{% url 'checkout' %}">Checkout</a></li>
-									<li><a href="booking-success.html">Booking Success</a></li>
+									<li><a href="{% url 'bookingsuccess' %}">Booking Success</a></li>
 									<li><a href="{% url 'menteedashboard' %}">Mentee Dashboard</a></li>
 									
-									<li><a href="profile-settings-mentee.html">Profile Settings</a></li>
+									<li><a href="{% url 'menteesettings' %}">Profile Settings</a></li>
 									<li><a href="{% url 'changepassword' %}">Change Password</a></li>
 								</ul>
 							</li>	
@@ -97,7 +97,7 @@
 									<li class="active"><a href="{% url 'voicecall' %}">Voice Call</a></li>
 									<li><a href="{% url 'videocall' %}">Video Call</a></li>
 									<li><a href="{% url 'search' %}">Search Mentors</a></li>
-									<li><a href="components.html">Components</a></li>
+									<li><a href="{% url 'component' %}">Components</a></li>
 									<li class="has-submenu">
 										<a href="{% url 'invoices' %}">Invoices</a>
 										<ul class="submenu">

@@ -71,19 +71,19 @@
 							<li class="has-submenu">
 								<a href="">Mentor <i class="fas fa-chevron-down"></i></a>
 								<ul class="submenu">
-									<li><a href="dashboard.html">Mentor Dashboard</a></li>
-									<li><a href="bookings.html">Bookings</a></li>
-									<li><a href="schedule-timings.html">Schedule Timing</a></li>
-									<li><a href="mentee-list.html">Mentee List</a></li>
-									<li><a href="profile-mentee.html">Mentee Profile</a></li>
+									<li><a href="{% url 'dashboard' %}">Mentor Dashboard</a></li>
+									<li><a href="{% url 'booking' %}">Bookings</a></li>
+									<li><a href="{% url 'schedule' %}">Schedule Timing</a></li>
+									<li><a href="{% url 'menteelist' %}">Mentee List</a></li>
+									<li><a href="{% url 'menteeprofile' %}">Mentee Profile</a></li>
 									<li class="has-submenu">
 										
 									</li>
-									<li><a href="chat.html">Chat</a></li>
-									<li><a href="invoices.html">Invoices</a></li>
-									<li><a href="profile-settings.html">Profile Settings</a></li>
-									<li><a href="reviews.html">Reviews</a></li>
-									<li><a href="mentor-register.html">Mentor Register</a></li>
+									<!-- <li><a href="chat.html">Chat</a></li> -->
+									<li><a href="{% url 'invoices' %}">Invoices</a></li>
+									<li><a href="{% url 'profilesettings' %}">Profile Settings</a></li>
+									<li><a href="{% url 'review' %}">Reviews</a></li>
+									<li><a href="{% url 'mentorregister' %}">Mentor Register</a></li>
 								</ul>
 							</li>	
 							<li class="has-submenu active">
@@ -92,40 +92,40 @@
 									<li class="has-submenu active">
 										<a href="#">Mentors</a>
 										<ul class="submenu">
-											<li class="active"><a href="map-grid.html">Map Grid</a></li>
-											<li><a href="map-list.html">Map List</a></li>
+											<li class="active"><a href="{% url 'mapgrid' %}">Map Grid</a></li>
+											<li><a href="{% url 'maplist' %}">Map List</a></li>
 										</ul>
 									</li>
-									<li><a href="search.html">Search Mentor</a></li>
-									<li><a href="profile.html">Mentor Profile</a></li>
-									<li><a href="bookings-mentee.html">Bookings</a></li>
-									<li><a href="checkout.html">Checkout</a></li>
-									<li><a href="booking-success.html">Booking Success</a></li>
-									<li><a href="dashboard-mentee.html">Mentee Dashboard</a></li>
-									<li><a href="favourites.html">Favourites</a></li>
-									<li><a href="chat-mentee.html">Chat</a></li>
-									<li><a href="profile-settings-mentee.html">Profile Settings</a></li>
-									<li><a href="change-password.html">Change Password</a></li>
+									<li><a href="{% url 'search' %}">Search Mentor</a></li>
+									<li><a href="{% url 'profile' %}">Mentor Profile</a></li>
+									<li><a href="{% url 'bookingmentee' %}">Bookings</a></li>
+									<li><a href="{% url 'checkout' %}">Checkout</a></li>
+									<li><a href="{% url 'bookingsuccess' %}">Booking Success</a></li>
+									<li><a href="{% url 'menteedashboard' %}">Mentee Dashboard</a></li>
+									<li><a href="{% url 'favourites' %}">Favourites</a></li>
+									<!-- <li><a href="chat-mentee.html">Chat</a></li> -->
+									<li><a href="{% url 'menteesettings' %}">Profile Settings</a></li>
+									<li><a href="{% url 'changepassword' %}">Change Password</a></li>
 								</ul>
 							</li>	
 							<li class="has-submenu">
 								<a href="">Pages <i class="fas fa-chevron-down"></i></a>
 								<ul class="submenu">
-									<li><a href="voice-call.html">Voice Call</a></li>
-									<li><a href="video-call.html">Video Call</a></li>
-									<li><a href="search.html">Search Mentors</a></li>
-									<li><a href="components.html">Components</a></li>
+									<li><a href="{% url 'voicecall' %}">Voice Call</a></li>
+									<li><a href="{% url 'videocall' %}">Video Call</a></li>
+									<li><a href="{% url 'search' %}">Search Mentors</a></li>
+									<li><a href="{% url 'component' %}">Components</a></li>
 									<li class="has-submenu">
-										<a href="invoices.html">Invoices</a>
+										<a href="{% url 'invoices' %}">Invoices</a>
 										<ul class="submenu">
-											<li><a href="invoices.html">Invoices</a></li>
-											<li><a href="invoice-view.html">Invoice View</a></li>
+											<li><a href="{% url 'invoices' %}">Invoices</a></li>
+											<li><a href="{% url 'invoiceview' %}">Invoice View</a></li>
 										</ul>
 									</li>
-									<li><a href="blank-page.html">Starter Page</a></li>
-									<li><a href="login.html">Login</a></li>
-									<li><a href="register.html">Register</a></li>
-									<li><a href="forgot-password.html">Forgot Password</a></li>
+									<!-- <li><a href="blank-page.html">Starter Page</a></li> -->
+									<li><a href="{% url 'login' %}">Login</a></li>
+									<li><a href="{% url 'register' %}">Register</a></li>
+									<li><a href="{% url 'forgotpassword' %}">Forgot Password</a></li>
 								</ul>
 							</li>
 							<li class="has-submenu">
@@ -158,7 +158,7 @@
 										<p class="text-muted mb-0">Mentor</p>
 									</div>
 								</div>
-								<a class="dropdown-item" href="dashboard.html">Dashboard</a>
+								<a class="dropdown-item" href="{% url 'dashboard' %}">Dashboard</a>
 								<a class="dropdown-item" href="{% url 'profilesettings' %}">Profile Settings</a>
 								<a class="dropdown-item" href="{% url 'login' %}">Logout</a>
 							</div>
@@ -811,7 +811,7 @@
 										<img src="{% static 'assets/img/logo.png' %}" alt="logo">
 									</div>
 									<div class="footer-about-content">
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+										<p> We aim to create a supportive and inclusive community where mentors can share their expertise, guidance, and experiences, while mentees can access valuable insights and support to navigate their unique paths. </p>
 										<div class="social-icon">
 											<ul>
 												<li>

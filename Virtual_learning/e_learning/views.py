@@ -57,3 +57,13 @@ def mentorregister(request):
     return render(request, 'mentor-register.html')
 def menteeprofile(request):
     return render(request, 'profile-mentee.html')
+def bookingmentee(request):
+    return render(request, 'bookings-mentee.html')
+def bookingsuccess(request):
+    return render(request, 'booking-sucess.html')
+def menteesettings(request):
+    return render(request, 'profile-settings-mentee.html')
+def component(request):
+    return render(request, 'components.html')
+def menteelist(request):
+    return render(request, 'mentee-list.html')
